@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>css 使用变换 </title>
+		<style type="text/css">
+			P {
+				width: 100px;
+				height: 100px;
+				background-color:antiquewhite ;
+			}
+			p:hover{
+				width: 100px;
+				height: 100px;
+				background-color:antiquewhite ;
+				transform:rotate(30deg)          <!--使点击后图像顺时针旋转30度-->;
+				transform:rotate(-30deg)          <!--使点击后图像逆时针旋转30度-->;
+				transform:scale(1.5);             <!--使	点击后图像整体放大1.5倍-->
+				transform:scalex(5);             <!--使	点击后图像长放大5倍-->
+				transform:scaley(5);             <!--使	点击后图像高放大5倍-->
+				transform-origin: top right;      <!--设置变换的起点为右上角--><!--bottom right 右下角 -->
+				transform-origin: 20px 40px;      <!--设置起点为距左端20px 上端40px的一个点-->
+			}
+		</style>
+	</head>
+	<body>
+		<p class="class1"></p>
+	</body>
+</html>

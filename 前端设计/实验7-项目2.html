@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>vue事件监听</title>
+		<script src="js/vue.js">
+			Vue.config.productionTip = false;
+		</script>
+	</head>
+	<body>
+		<div id="content">
+			<h1>计算机属性的getter与setter属性的应用</h1>
+			<h2>初始信息：</h2>
+			<p v-once>志愿学校/专业：{{load}}</p>
+			<h2>computed设置后立即更新：</h2>
+			<p>志愿学校/专业：{{load}}</p>
+			<h2>methods单机按钮时才更新：</h2>
+			<input type="button" value="set更新" @click="set()"/>
+			<p>志愿学校/专业：{{load}}</p>
+		</div>
+	</body>
+	<script>
+		var newvue = new Vue({
+			el:'#content',
+			data:{
+				load:"清华大学/人工智能"
+			},
+			computed: {
+				testcomputed:{
+					set: function(newValue){
+						this.load = newValue;
+					},
+					get: function(){
+						return this.load;
+					}
+				}
+			},
+			methods: {
+				set:function(){
+					this.load = "华南理工大学/建筑设计专业"
+				}
+			}
+		})
+		newvue.testcomputed = '南京大学/大数据科学与技术';
+	</script>
+</html>

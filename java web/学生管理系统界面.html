@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>学生管理系统</title>
+		<style>
+			li{
+				list-style-type: none;
+				cursor: default;
+			}
+			a{
+				text-decoration: none;
+				color: black;
+			}
+			.son{
+				display: none;
+				position: relative;
+				top: -90px;
+				left: 150px;
+				
+			}
+			.showNumber, .showName, .onIdDelete{
+				display: none;
+				position: relative;
+				top: -160px;
+				left: 350px;
+			}
+			.AddStudent, .onIdModify{
+				display: none;
+			}
+			#all{
+				border: 0px;
+				font-size: 17px;
+				background-color: rgba(0,0,0,0);
+			}
+		</style>
+	</head>
+	 <body>
+    <h1>欢迎使用学生信息管理系统！</h1>
+    
+	    <div>
+	    	<p>选择你要使用的功能</p>
+	    	<ul>
+	    		<li onclick="showAdd()">查询学生信息</li>
+	    		<li onclick="AddStudent()">增加学生信息</li>
+	    		<li onclick="onIdDelete()">删除学生信息</li>
+	    		<li onclick="onIdModify()">修改学生信息</li>
+	    	</ul>
+	    </div>
+	    <div class="son">
+	    	<ul>
+	    		<li>
+	    		    <form action="selece_all.jsp" method="post">
+	    		    	<input type="submit" id="all" value="查询全部" />
+	    		    </form>
+	    		</li>
+	    		<li onclick="showNumber()">按学号查找</li>
+	  			<li onclick="showName()">按姓名模糊查找</li>
+	   		</ul>
+	    </div>
+	    <div class="showNumber">
+	    	<p>请输入查询学生的学号</p>
+	    	<form action="select_onId.jsp">
+		    	<input name="numb" type="number" />
+		    	<input type="submit" value="查寻" />
+	    	</form>
+	    	
+	    </div>
+	    <div class="showName">
+	    	<p>请输入查询学生的姓名</p>
+	    	<form action="select_onName.jsp"  method="post">
+		    	<input name="nam" type="text" />
+		    	<input type="submit" value="查寻" />
+	    	</form>
+	    	
+	    </div>
+	    <div class="AddStudent">
+	    	<p>请完善添加的学生信息</p>
+	    	<form action="Add.jsp" method="post">
+		    	<p>学号：<input name="numbTwo" type="number" /></p>
+		    	<p>姓名：<input name="nam" type="text" /></p>
+		    	<p>性别：<input name="Gend" type="text" /></p>
+		    	<p>年龄：<input name="ag" type="text" /> <input type="submit" value="添加" /></p>
+	    	</form>
+	    </div>
+	    <div class="onIdDelete">
+	    	<p>请输入要删除学生的学号</p>
+	    	<form action="deleat.jsp">
+		    	<p>学号：<input name="nb" type="number" /></p>
+		    	 <input type="submit" value="删除" /></p>
+	    	</form>
+	    </div>
+	    <dov class="onIdModify">
+	    	<p>请输入要修改的学生的学号及后续要修改的学生信息</p>
+	    	<form action="modify.jsp" method="post">
+		    	<p>需修改信息学生的学号<input name="inid" type="number" value="" /></p>
+		    	<p>修改后的姓名 <input name="inName" type="text" value="" /></p>
+		    	<p>修改后的性别 <input name="inGend" type="text" value="" /></p>
+		    	<p>修改后的年龄 <input name="inage" type="number" value="" /></p>
+		    	<input type="submit" value="确定修改" />
+	    	</form>
+	    	
+	    </dov>
+	    	
+	    <script>
+	    	function showAdd(){
+	    		document.getElementsByClassName("son")[0].setAttribute("style",'display: inline');
+	    	}
+	    	function showNumber(){
+	    		document.getElementsByClassName("showName")[0].setAttribute("style",'display: none');
+	    		document.getElementsByClassName("showNumber")[0].setAttribute("style",'display: inline');
+	    	}
+	    	function showName(){
+	    		document.getElementsByClassName("showNumber")[0].setAttribute("style",'display: none');
+	    		document.getElementsByClassName("showName")[0].setAttribute("style",'display: inline');
+	    	}
+	    	function AddStudent(){
+	    		document.getElementsByClassName("AddStudent")[0].setAttribute("style",'display: inline');
+	    	}
+	    	function onIdDelete(){
+	    		document.getElementsByClassName("onIdDelete")[0].setAttribute("style",'display: inline');
+	    	}
+	    	function onIdModify(){
+	    		document.getElementsByClassName("onIdModify")[0].setAttribute("style",'display: inline');
+	    	}
+	    </script>
+	    
+	    
+	    
+
+  </body>
+</html>

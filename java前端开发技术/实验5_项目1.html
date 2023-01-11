@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>图像放大</title>
+		<style>
+			h1{
+				border-bottom: 1px dashed #097;
+				color: #000099;
+				font: 17px georgia,serif;
+				margin: 0 0 10px;
+				padding: 0 0 35px;
+				text-align: center;
+			}
+			.content{
+				float: left;
+				width: 1200px;
+				text-align: center;
+			}
+			ul{
+				cursor: default;
+				list-style: none;
+				padding: 40px;
+				margin: 0 auto;
+			}
+			li{
+				float: left;
+				display: inline;
+				margin: 3px;
+				padding: 5px;
+				position: relative;
+			}
+			img{
+				border: 10px solid  aqua;
+				padding: 2px;
+				vertical-align: top;
+				width: 180px;
+				height: 140px;
+			}
+			.preview{
+				display: none;
+				border: 1px solid #000;
+				width: 350px;
+				height: 240px;
+			}
+			a:hover .preview{
+				display: block;
+				position: absolute;
+				top: -33px;
+				left: -45px;
+				z-index: 1;
+			}
+			/*html * {
+    			outline: 1px solid red
+			}*/
+		</style>
+	</head>
+	<body>
+		
+		<div class="content">
+			<h1>鼠标经过图片显示大图（Hoverbox Image Gallery）</h1>
+			<ul>
+				<li><a href="#">
+					<img src="img/实验5N/photo01.jpg" class="preview"/>
+					<img src="img/实验5N/photo01.jpg" /></a>
+				</li>
+				<li><a href="#">
+					<img src="img/实验5N/photo02.jpg" class="preview"/>
+					<img src="img/实验5N/photo02.jpg" /></a>
+				</li>
+				<li><a href="#">
+					<img src="img/实验5N/photo03.jpg" class="preview"/>
+					<img src="img/实验5N/photo03.jpg" /></a>
+				</li>
+				<li><a href="#">
+					<img src="img/实验5N/photo04.jpg" class="preview"/>
+					<img src="img/实验5N/photo04.jpg" /></a>
+				</li>
+				<li><a href="#">
+					<img src="img/实验5N/photo05.jpg" class="preview"/>
+					<img src="img/实验5N/photo05.jpg" /></a>
+				</li>
+				<li><a href="#">
+					<img src="img/实验5N/photo06.jpg" class="preview"/>
+					<img src="img/实验5N/photo06.jpg" /></a>
+				</li>
+				<li><a href="#">
+					<img src="img/实验5N/photo07.jpg" class="preview"/>
+					<img src="img/实验5N/photo07.jpg" /></a>
+				</li>
+				<li><a href="#">
+					<img src="img/实验5N/photo08.jpg" class="preview"/>
+					<img src="img/实验5N/photo08.jpg" /></a>
+				</li>
+				<li><a href="#">
+					<img src="img/实验5N/photo09.jpg" class="preview"/>
+					<img src="img/实验5N/photo09.jpg" /></a>
+				</li>
+				<li><a href="#">
+					<img src="img/实验5N/photo10.jpg" class="preview"/>
+					<img src="img/实验5N/photo10.jpg" /></a>
+				</li>
+			</ul>
+		</div>
+	</body>
+</html>

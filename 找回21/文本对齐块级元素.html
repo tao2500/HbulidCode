@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>wordP191</title>
+		<style>
+			.a{
+				background-color: #AAAAAA;
+				text-align: center;
+			}
+			.b{
+				background-color: #45A049;
+				position: absolute;
+				height: 0;
+				overflow: hidden;
+			}
+			.clip{
+				position: absolute;
+				clip: rect(0px,0px,0px,0px);
+			}
+			.clip-show{
+				position: absolute;
+				clip: rect(0px,0px,0px,0px);
+			}
+			input{
+				cursor: pointer;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="a">
+			<div class="b">这是块级元素的内容</div>
+		</div>
+		<div>
+			<p class="clip">这是一个测试文字</p>
+		</div>
+		<a><h1 class="clip">title</h1></a>
+		<input type="button" class="clip-show" value="test"/>
+	</body>
+</html>

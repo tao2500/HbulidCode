@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>比大小</title>
+		<style> /*-webkit- -moz- 浏览器私有前缀,浏览器对新css属性的提前支持*/
+			input::-webkit-outer-spin-button,input::-webkit-inner-spin-button {
+				-webkit-appearance: none;
+			}
+		</style>
+	</head>
+	<body>
+		<input type="number" id="one"/>
+		<big>VS</big>
+		<input type="number" id="two"/>
+		<input type="button" name="botton" id="botton" value="The Max is" onclick="compare()" />
+		<script>
+			function compare(){
+				var one = document.getElementById("one");
+				var two = document.getElementById("two");
+				var max = one.value>two.value ? one.value : two.value;
+				var output = document.getElementById("botton");
+				output.setAttribute("value","The Max is "+max);
+			}45
+		</script>
+	</body>
+</html>
+
+
+<!--为什么要有私有前缀呢？因为制定HTML和CSS标准的组织W3C动作是很慢的。通常，有w3c组织成员提出一个新属性，比如说圆角border-radius，大家都觉得好。
+但是w3c不会为这个属性制定标准，而是要走很复杂的程序，经过很多审查。而浏览器商不愿意等那么久，他们觉得一个属性已经够成熟了，就会在浏览器中加入支持。
+但是避免日后w3c公布标准时有所变更，就会加入一个私有前缀，比如-webkit-border-radius，通过这种方式来提前支持新属性，等到日后w3c公布了标准，
+border-radius的标准写法确立之后，再让新版的浏览器支持border-radius这种写法。-->

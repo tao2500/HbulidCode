@@ -1,0 +1,60 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>div的自动滚动</title>
+<style type="text/css">
+	#scrollMsg{
+		width:500px;
+		height:235px;
+		background-color:#feeff7;
+		overflow:scroll;
+		overflow-x:hidden;
+		text-overflow:ellipsis;
+		word-break:break-all;
+		}
+	#scrollMsg span{
+		margin:6px;
+		display:block;
+		}
+	#scrollMsg span a{
+		color: #00FF00;
+		text-decoration:underline;
+		margin:0 4px;
+		}
+	#scrollMsg span a:hover{
+		color:#f20;
+		}
+	#scrollMsg span label{
+		color:#c70060;
+		margin:0 4px;
+		}
+</style>
+</head>
+<body>
+	<div id="scrollMsg"></div>
+	
+	
+	<script type="text/javascript">
+		function getEid(id){
+		    return document.getElementById(id);  
+		}
+		function newNode(param){
+		    return document.createElement(param);
+		}
+		function newTextNode(param){
+		    return document.createTextNode(param);
+		}
+		
+		function scrollDiv(){
+		    var dest=getEid("scrollMsg");
+		    var newStr=newTextNode(new Date().toLocaleString()+":这是一个测试文本");
+		    var span=newNode("span"); 
+		    span.appendChild(newStr); 
+		    dest.appendChild(span);
+		    scrollMsg.scrollTop+=50;  //Element.scrollTop 属性可以获取或设置一个元素的内容垂直滚动的像素数。及数值为向上滚动的像素数//实现滚动到打印的最后一行
+		    setTimeout("scrollDiv()",2000);
+		}
+		window.onload=scrollDiv;
+	</script>
+</body>
+</html>

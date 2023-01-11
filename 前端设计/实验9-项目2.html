@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>自定义指令P60</title>
+		<script src="js/vue.js">
+			Vue.config.productionTip = false;
+		</script>
+	</head>
+	<body>
+		<div id="content">
+			姓名：<input v-focus v-model="name">
+			<br />
+			<span v-change>输入的姓名为：{{name}}</span>
+		</div>
+	</body>
+	<script>
+		//全局注册
+		Vue.directive('focus',{
+			inserted: function(el){
+				el.focus()
+			}
+		}),
+		new Vue({
+			el:"#content",
+			data:{
+				name:''
+			},
+			//局部注册
+			directives: {
+				change: {
+					inserted: function(el,binding){
+						var redcolor = Math.floor(Math.random()*256);
+						var greencolor = Math.floor(Math.random()*256);
+						var bluecolor = Math.floor(Math.random()*256);
+						el.style.backgroundColor = "#"+redcolor + greencolor + bluecolor
+					}
+				}
+			}
+		})
+	</script>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>按钮放大文本</title>
+		<script src="js/vue.js"></script>
+	</head>
+	<body>
+		<div id="content">
+			<div v-bind:style="{fontSize:fontSize + 'px'}">
+				<test-font v-bind:text="text" v-on:setfont="fontSize +=2">
+				</test-font>
+			</div>
+		</div>
+	</body>
+	<script>
+		Vue.component('test-font',{
+			props:['text'],
+			template:'<div><input type="button" v-on:click="action" value="放大文字"/><p>{{text}}</p></div>',
+			methods:{
+				action:function(){
+					this.$emit('setfont')
+				}
+			}
+		})
+		var vm = new Vue({
+			el:'#content',
+			data:{
+				text:'千里之行，始于足下',
+				fontSize: 22
+			}
+		})
+	</script>
+</html>

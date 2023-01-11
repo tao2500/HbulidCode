@@ -1,0 +1,6 @@
+<div class="ok" style="float: left;clear: left;position: relative;top: 45vh;left: 54vh;">
+			<img src="img/bg_3.png" />
+			<br />
+			<br />
+			<h1 style="position: relative; left: 4vh;">提交成功</h1>
+</div>

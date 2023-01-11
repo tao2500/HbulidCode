@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>变量测试</title>
+</head>
+
+<body>
+    <p>测试vscode下let const 是否可用！</p>
+</body>
+<script>
+    window.onload = showone();
+
+    function showone() {
+        var a = "全局变量";
+        let b = "局部变量";
+        alert(a);
+        showtwo();
+        alert(b);
+    }
+
+    function showtwo() {
+        const c = "不可更改的变量";
+        alert(c);
+        alert("two下测试全局变量" + a);
+        console.log("two下测试局部变量" + b);
+    }
+</script>
+
+</html>

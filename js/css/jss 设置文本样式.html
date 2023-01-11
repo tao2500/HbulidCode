@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>创建文本样式</title>
+	</head>
+	<style type="text/css">
+		.class1{
+			text-align: justify;                <!--自定义对齐方式 对中文效果差-->
+			text-align: center ;                <!--居中对齐-->
+			text-align: right;                  <!--右边对齐-->
+			text-align: left;                   <!--默认对齐-->
+			
+			direction: ltr;    <!--设置文本方向-->  <!--从左到右排   rtl从右到左--> 
+			
+			letter-spacing: 10px;               <!--设置字母间距-->
+			word-spacing: 10px;                 <!--设置单词间间距-->
+			line-height: 10px;                  <!--设置行高-->
+			
+			text-indent: 10px;                  <!--设置首行缩进(开头空格)-->
+			
+			text-decoration: underline;         <!--设置下划线效果-->
+			text-decoration: overline;         <!--设置上划线效果-->
+			text-decoration: line-through;         <!--设置删除线线效果-->
+			
+			text-transform: capitalize;        <!--大小写转化 单词首字母自动变大写-->
+			text-transform: uppercase;         <!--全部转变为大写-->
+			text-transform: lowercase;         <!--全部转变为小写-->
+		}
+		
+	</style>
+	
+	<body>
+		<p class="class1">hello world </p>
+		
+	    <p class="class1" align="center">靠谱学院 </p>     <!--用html5核心规划居中对齐-->
+	    
+	    <a href="jss 各种选择器.html">测试文本装设 </a>      <!--用html5设置下划线-->
+	</body>
+</html>

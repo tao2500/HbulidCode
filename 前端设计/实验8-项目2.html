@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>v-if指令</title>
+		<script src="js/vue.js">
+			Vue.config.productionTip = false;
+		</script>
+	</head>
+	<body>
+		<h1>条件渲染综合应用</h1>
+		<h2>1.使用v-if、v-else指令显示隐藏信息</h2>
+		<div id="one">
+			<button v-on:click="change()">{{flag}}显示/隐藏</button>
+			<div v-if="flag">
+				<p >当flag为true时，我闪亮登场！</p>
+				<br />
+			</div>
+			<div v-else>
+				<h2>模板内容</h2>
+				<p >Vue.js易学易用</p>
+			</div>
+			
+			<h2>2.使用v-if、v-else-if、v-else指令实现成绩百分制转换五级制</h2>
+			<p>输入成绩：<input type="number" v-model="number" value={{number}}/></p>
+			成绩等级为：
+			<span v-if="number>80">优秀</span>
+			<span v-else-if="number>70">良好</span>
+			<span v-else-if="number>60">合格</span>
+			<span v-else-if="number>40">差</span>
+			<span v-else>不及格</span>
+		</div>
+		
+	</body>
+	<script>
+		new Vue({
+			el:"#one",
+			data: {
+			   flag: true,
+			   number:97
+			},
+			methods:{
+				change:function(){
+					this.flag = !this.flag
+				}
+			}
+		})
+	</script>
+</html>

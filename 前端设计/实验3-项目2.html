@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>显示列表项的内容</title>
+	</head>
+	<body>
+		<h3>显示列表项的内容</h3>
+		<select onclick="displayItem()" size="5">
+			<option value="35元">计算机组成原理</option>
+			<option value="38元">数据结构</option>
+			<option value="43元">计算机网络</option>
+			<option value="40元">Java程序设计</option>
+			<option value="28元">算法分析</option>
+		</select>
+	</body>
+	<script>
+//		window.onload=displayItem();
+		function displayItem(){
+			var Option = document.getElementsByTagName("select")[0];
+			var index = Option.selectedIndex;
+			for(var i = 0;i<Option.length;i++){
+				if(index == i){
+					alert("教材名称："+Option[index].value+"\n定价："+Option[index].innerHTML)
+				}
+			}
+		}
+	</script>
+</html>

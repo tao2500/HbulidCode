@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>验证码生成</title>
+		<style>
+			#output{
+				border: none;
+				color: blue;
+			}
+			.rea{
+				border: none;
+				background-color: aliceblue;
+				color: cadetblue;
+			}
+		</style>
+	</head>
+	<body>
+		<input  id="output" type="text" /> <input class="rea" onclick="setOutput()" type="button" value="看不清楚换一张" />
+		<p>验证码： <input id="input" type="text" />请输入验证码</p>
+		<input  type="submit" onclick="getInput()" value="确认" />
+	</body>
+	
+	<script>
+		window.onload=setOutput();
+		var number;
+		function getInput(){
+			var input=document.getElementById("input");
+			var result=document.getElementById("result"); 
+			var a=input.value;
+			if(number==a){
+				alert("验证码正确！")
+			}else{
+				alert("验证码输入有误!");
+			}
+			}
+		function setOutput(){
+			var output=document.getElementById("output");
+			number=Math.floor(Math.random()*9999+1);
+			while(number<1000||number>10000){
+				setOutput();
+				}
+			output.setAttribute("value",number);
+		}
+	</script>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>全选与否</title>
+		<style>
+			.content{
+				width: 180px;
+				height: 300px;
+				background-color: #FAEBD7;
+			}
+			span{
+				cursor: default; 
+			}
+			span p{
+				display: inline;
+			}
+			input:before{
+				content: '';
+				display: block;
+			}
+			.ReverseSelec{
+				color: #808080;
+				position: absolute;
+				top: -7px;
+			}
+			.sele{
+				display: inline;
+			}
+			.seletwo{
+				display: none;
+				position: relative;
+				left: -62px;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="content">
+			<input type="checkbox"  id="seleattress" onclick="Selectall()"/> 
+			<span  class="sele"><p>全选</p></span> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			<span> <p class="ReverseSelec" onclick="ReverseSelection()" >反选</p></span>
+			<span  class="seletwo"><p>全不选</p></span>
+			<hr />
+			<div><input  type="checkbox" id="one" onclick="add()"/> 选项1</div>
+			<div><input  type="checkbox" id="two" onclick="add()"/> 选项2</div>
+			<div><input  type="checkbox" id="three" onclick="add()"/> 选项3</div>
+			<div><input  type="checkbox" id="four" onclick="add()"/> 选项4</div>
+			<div><input  type="checkbox" id="five" onclick="add()"/> 选项5</div>
+			<div><input  type="checkbox" id="six"  onclick="add()"/> 选项6</div> 
+			<div><input  type="checkbox" id="seven"  onclick="add()"/> 选项7</div>
+			<div><input  type="checkbox" id="eight"  onclick="add()"/> 选项8</div>
+			<div><input  type="checkbox" id="night"  onclick="add()"/> 选项9</div>
+			<div><input  type="checkbox" id="ten"  onclick="add()"/> 选项10</div>
+		</div>
+		<script src="js/DemoFour.js"></script>
+	</body>
+</html>

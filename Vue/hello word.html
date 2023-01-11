@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>第一个vue程序</title>
+    <script src="js/vue.js"></script>
+</head>
+
+<body>
+    <div id="app">
+        <p>大家好，我是<b>{{name}},</b></p>
+        <p>今年<b>{{age}}</b>岁。</p>
+    </div>
+</body>
+
+<script>
+    var app = new Vue({
+        el: '#app',
+        data: {
+            name: "王老师",
+            age: "30"
+        }
+    })
+</script>
+
+</html>

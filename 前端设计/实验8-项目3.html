@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="js/vue.js">
+			Vue.config.productionTip = false;
+		</script>
+	</head>
+	<body>
+		<div id="app">
+			<input type="button" value="按钮" v-bind:title="Title" v-bind:style="{color:Color,width:Width+'px'}" />
+		</div>
+	</body>
+	<script>
+		new Vue({
+			el:"#app",
+			data:{
+				Title:'v-bind测试',
+				Color:'red',
+				Width:'120'
+			}
+		})
+	</script>
+</html>

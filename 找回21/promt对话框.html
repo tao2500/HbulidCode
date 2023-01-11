@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<h1>连续多个确认框测试（浏览器动作）</h1>
+		<button onclick="sta()">开始测试</button>
+	</body>
+	<script>
+		function sta(){
+			alert("开始测试啦");
+			var a = prompt("1","1");
+			alert("即将弹出打印对话框");
+			window.print();
+			var b = prompt("2","2");
+			var c = prompt("3","3");
+			confirm("要继续测试吗？");
+			var d = prompt("4","4");
+			alert("即将打开查找对话框");
+			window.find();
+			var e = prompt("5","5");
+		}
+	</script>
+</html>

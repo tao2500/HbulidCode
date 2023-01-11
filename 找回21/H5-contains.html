@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>redbookP457</title>
+	</head>
+	<body>
+		
+		<div class="a b c">classlisst测试</div>
+		
+		<script>
+			var body = document.body;
+			var cla = document.getElementsByClassName("a")[0];
+			console.log(body.contains(cla));
+			var h5body = document.documentElement.compareDocumentPosition(cla);
+//			alert(h5body);
+			console.log(!!(h5body & 0x10));
+		</script>
+	</body>
+</html>

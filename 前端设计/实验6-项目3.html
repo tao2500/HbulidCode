@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>修改绑定</title>
+		<script src="js/vue.js"></script>
+	</head>
+	<body>
+		<div id="thre">
+			<p>大家好，我是{{name}}</p>
+			<p>今年{{age}}岁</p>
+			<input type="button" value="修改" v-on:click="updata()" />
+		</div>
+	</body>
+	<script>
+		new Vue({
+			el:"#thre",
+			data:{
+				name:'王宝强',
+				age:'23',
+			},
+			methods:{
+				updata:function(){
+					this.name == '王宝强'? this.name = '宝强王' : this.name = '王宝强'
+					this.age == '23'? this.age = '32' : this.age = '23'
+
+				}
+			}
+		})
+	</script>
+</html>

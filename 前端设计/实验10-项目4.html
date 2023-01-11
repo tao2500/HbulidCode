@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>filters选项定义本地过滤器</title>
+		<script src="js/vue.js"></script>
+	</head>
+	<body>
+		<div id="content">
+			<h1>{{text | subStr}}</h1>
+		</div>
+		
+	</body>
+	<script>
+		new Vue({
+			el:"#content",
+			data:{
+				text: '每天编程一小时大型IT公益活动'
+			},
+		  	filters : {
+		  		subStr : function(value){
+		  			if(value.length > 9){
+		 					return value.substr(0,9)+"......";
+		  			}else{
+		 					return value;
+		  			}
+		  		}
+		  	}
+		})
+	</script>
+</html>

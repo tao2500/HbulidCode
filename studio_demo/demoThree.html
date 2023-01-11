@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>在线计算机</title>
+		<style>
+			
+			.content{
+				width: 450px;
+				height: 700px;
+				background-color: black;
+			}
+			#text,#result{
+				font-size: 30px;
+				width: 450px;
+				height: 50px;
+				border-style: none;
+				background-color: #808080;
+			}
+			input{
+				/*direction: rtl;*/
+				text-align: right;
+			}
+			table{
+				position: absolute;
+				top: 120px;
+			}
+			td{
+				font-size: 25px;
+				border-radius: 10px;
+				background-color: antiquewhite;
+				/*margin: 50px;
+				padding: 43px 47px;*/
+				float: left;
+				width: 90px;
+				height: 53px;
+				margin-right:24px ;
+				margin-bottom: 40px;
+				padding: 25px 0 0 0;
+				text-align: center;
+				vertical-align: inherit;
+				
+			}
+			td:hover{
+				background-color: aliceblue;
+			}
+			.equa{
+				height: 200px;
+				padding: 90px 0 0 0;
+				height: 110px;
+			}
+			.zero{
+				width: 208px;
+			}
+			.patch{
+				position: relative;
+				top: -120px;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="content">
+			<input type="text" id="text" readonly/>
+			<br />
+			<input type="text" id="result" readonly/>
+			<table id="myGrid">
+				<tr>
+					<td onclick="initialization()">C</td>
+					<td onclick="operator(1)">%</td>
+					<td onclick="operator(2)">/</td>
+					<td onclick="operator(3)">*</td>
+				</tr>
+				<tr>
+					<td onclick="recode(7)">7</td>
+					<td onclick="recode(8)">8</td>
+					<td onclick="recode(9)">9</td>
+					<td onclick="operator(4)">-</td>
+				</tr>
+				<tr>
+					<td onclick="recode(4)">4</td>
+					<td onclick="recode(5)">5</td>
+					<td onclick="recode(6)">6</td>
+					<td onclick="operator(5)">+</td>
+				</tr>
+				<tr>
+					<td onclick="recode(1)">1</td>
+					<td onclick="recode(2)">2</td>
+					<td onclick="recode(3)">3</td>
+					<td class="equa" rowspan="2" onclick="calculation()">=</td>
+				</tr>
+				<tr class="patch">
+					<td class="zero" colspan="2" onclick="recode(0)">0</td>
+					<td onclick="recode(11)">.</td>   //参数11代表一个点.
+				</tr>
+			</table>
+			<script src="js/demoThree.js"></script>
+		</div>
+	</body>
+</html>

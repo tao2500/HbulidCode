@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>三级联动菜单栏</title>
+	</head>
+	<body>
+		<div>大洲：<select class="zhou" onchange="cre_guo()">
+			<option>请选择大洲...</option>
+			<option>亚洲</option>
+			<option>欧洲</option>
+			<option>美洲</option>
+		</select>
+		国家：<select class="guo" onchange="cre_city()">
+			<option>请选择国家.....</option>
+		</select>
+		城市：<select class="city">
+			<option>请选择城市....</option>
+		</select></div>
+	</body>
+	<script>
+		var sele1;
+		function cre_guo(){
+			dela_guo();
+			var zhou = document.getElementsByClassName("zhou")[0];
+			var index = zhou.selectedIndex;
+			sele1 = index;
+			var guo = document.getElementsByClassName("guo")[0];
+			if(index == 0){
+				alert("请选择大洲！");
+			}
+			if(index ==1){
+				var optio0 = document.createElement("option");
+				var tex0 = document.createTextNode("请选择国家...");
+				optio0.appendChild(tex0);
+				guo.appendChild(optio0);
+				var optio1 = document.createElement("option");
+				var tex1 = document.createTextNode("中国");
+				optio1.appendChild(tex1);
+				guo.appendChild(optio1);
+				var optio2 = document.createElement("option");
+				var tex2 = document.createTextNode("日本");
+				optio2.appendChild(tex2);
+				guo.appendChild(optio2);
+				var optio3 = document.createElement("option");
+				var tex3 = document.createTextNode("泰国");
+				optio3.appendChild(tex3);
+				guo.appendChild(optio3);
+			}
+			if(index == 2){
+				var optio0 = document.createElement("option");
+				var tex0 = document.createTextNode("请选择国家...");
+				optio0.appendChild(tex0);
+				guo.appendChild(optio0);
+				var optio1 = document.createElement("option");
+				var tex1 = document.createTextNode("俄罗斯");
+				optio1.appendChild(tex1);
+				guo.appendChild(optio1);
+				var optio2 = document.createElement("option");
+				var tex2 = document.createTextNode("英国");
+				optio2.appendChild(tex2);
+				guo.appendChild(optio2);
+				var optio3 = document.createElement("option");
+				var tex3 = document.createTextNode("法国");
+				optio3.appendChild(tex3);
+				guo.appendChild(optio3);
+			}
+			if(index == 3){
+				var optio0 = document.createElement("option");
+				var tex0 = document.createTextNode("请选择国家...");
+				optio0.appendChild(tex0);
+				guo.appendChild(optio0);
+				var optio1 = document.createElement("option");
+				var tex1 = document.createTextNode("美国");
+				optio1.appendChild(tex1);
+				guo.appendChild(optio1);
+				var optio2 = document.createElement("option");
+				var tex2 = document.createTextNode("加拿大");
+				optio2.appendChild(tex2);
+				guo.appendChild(optio2);
+				var optio3 = document.createElement("option");
+				var tex3 = document.createTextNode("古巴");
+				optio3.appendChild(tex3);
+				guo.appendChild(optio3);
+			}
+		}
+		function cre_city(){
+			dela_city();
+			var guo = document.getElementsByClassName("guo")[0];
+			var city = document.getElementsByClassName("city")[0];
+			var inde = guo.selectedIndex;
+//			alert("大洲"+sele1+" ."+"国家 "+inde);
+			if (sele1== 1 && inde == 1) {
+				var optio0 = document.createElement("option");
+				var tex0 = document.createTextNode("请选择城市...");
+				optio0.appendChild(tex0);
+				city.appendChild(optio0);
+				var optio1 = document.createElement("option");
+				var tex1 = document.createTextNode("北京");
+				optio1.appendChild(tex1);
+				city.appendChild(optio1);
+				var optio2 = document.createElement("option");
+				var tex2 = document.createTextNode("上海");
+				optio2.appendChild(tex2);
+				city.appendChild(optio2);
+				var optio3 = document.createElement("option");
+				var tex3 = document.createTextNode("广州");
+				optio3.appendChild(tex3);
+				city.appendChild(optio3);
+			}
+			if (sele1== 1 && inde == 2) {
+				var optio0 = document.createElement("option");
+				var tex0 = document.createTextNode("请选择城市...");
+				optio0.appendChild(tex0);
+				city.appendChild(optio0);
+				var optio1 = document.createElement("option");
+				var tex1 = document.createTextNode("东京");
+				optio1.appendChild(tex1);
+				city.appendChild(optio1);
+				var optio2 = document.createElement("option");
+				var tex2 = document.createTextNode("北海道");
+				optio2.appendChild(tex2);
+				city.appendChild(optio2);
+				var optio3 = document.createElement("option");
+				var tex3 = document.createTextNode("横滨");
+				optio3.appendChild(tex3);
+				city.appendChild(optio3);
+			}
+			if (sele1== 1 && inde == 3) {
+				var optio0 = document.createElement("option");
+				var tex0 = document.createTextNode("请选择城市...");
+				optio0.appendChild(tex0);
+				city.appendChild(optio0);
+				var optio1 = document.createElement("option");
+				var tex1 = document.createTextNode("曼谷");
+				optio1.appendChild(tex1);
+				city.appendChild(optio1);
+				var optio2 = document.createElement("option");
+				var tex2 = document.createTextNode("清迈");
+				optio2.appendChild(tex2);
+				city.appendChild(optio2);
+				var optio3 = document.createElement("option");
+				var tex3 = document.createTextNode("苏梅岛");
+				optio3.appendChild(tex3);
+				city.appendChild(optio3);
+			}
+			if (sele1== 2 && inde == 1) {
+				var optio0 = document.createElement("option");
+				var tex0 = document.createTextNode("请选择城市...");
+				optio0.appendChild(tex0);
+				city.appendChild(optio0);
+				var optio1 = document.createElement("option");
+				var tex1 = document.createTextNode("莫斯科");
+				optio1.appendChild(tex1);
+				city.appendChild(optio1);
+				var optio2 = document.createElement("option");
+				var tex2 = document.createTextNode("圣彼得堡");
+				optio2.appendChild(tex2);
+				city.appendChild(optio2);
+				var optio3 = document.createElement("option");
+				var tex3 = document.createTextNode("喀山");
+				optio3.appendChild(tex3);
+				city.appendChild(optio3);
+			}
+			if (sele1== 2 && inde == 2) {
+				var optio0 = document.createElement("option");
+				var tex0 = document.createTextNode("请选择城市...");
+				optio0.appendChild(tex0);
+				city.appendChild(optio0);
+				var optio1 = document.createElement("option");
+				var tex1 = document.createTextNode("伦敦");
+				optio1.appendChild(tex1);
+				city.appendChild(optio1);
+				var optio2 = document.createElement("option");
+				var tex2 = document.createTextNode("利兹");
+				optio2.appendChild(tex2);
+				city.appendChild(optio2);
+				var optio3 = document.createElement("option");
+				var tex3 = document.createTextNode("爱丁堡");
+				optio3.appendChild(tex3);
+				city.appendChild(optio3);
+			}
+			if (sele1== 2 && inde == 3) {
+				var optio0 = document.createElement("option");
+				var tex0 = document.createTextNode("请选择城市...");
+				optio0.appendChild(tex0);
+				city.appendChild(optio0);
+				var optio1 = document.createElement("option");
+				var tex1 = document.createTextNode("巴黎");
+				optio1.appendChild(tex1);
+				city.appendChild(optio1);
+				var optio2 = document.createElement("option");
+				var tex2 = document.createTextNode("里尔");
+				optio2.appendChild(tex2);
+				city.appendChild(optio2);
+				var optio3 = document.createElement("option");
+				var tex3 = document.createTextNode("兰斯");
+				optio3.appendChild(tex3);
+				city.appendChild(optio3);
+			}
+			if (sele1== 3 && inde == 1) {
+				var optio0 = document.createElement("option");
+				var tex0 = document.createTextNode("请选择城市...");
+				optio0.appendChild(tex0);
+				city.appendChild(optio0);
+				var optio1 = document.createElement("option");
+				var tex1 = document.createTextNode("纽约");
+				optio1.appendChild(tex1);
+				city.appendChild(optio1);
+				var optio2 = document.createElement("option");
+				var tex2 = document.createTextNode("休斯顿");
+				optio2.appendChild(tex2);
+				city.appendChild(optio2);
+				var optio3 = document.createElement("option");
+				var tex3 = document.createTextNode("旧金山");
+				optio3.appendChild(tex3);
+				city.appendChild(optio3);
+			}
+			if (sele1== 3 && inde == 2) {
+				var optio0 = document.createElement("option");
+				var tex0 = document.createTextNode("请选择城市...");
+				optio0.appendChild(tex0);
+				city.appendChild(optio0);
+				var optio1 = document.createElement("option");
+				var tex1 = document.createTextNode("温哥华");
+				optio1.appendChild(tex1);
+				city.appendChild(optio1);
+				var optio2 = document.createElement("option");
+				var tex2 = document.createTextNode("多伦多");
+				optio2.appendChild(tex2);
+				city.appendChild(optio2);
+				var optio3 = document.createElement("option");
+				var tex3 = document.createTextNode("渥太华");
+				optio3.appendChild(tex3);
+				city.appendChild(optio3);
+			}
+			if (sele1== 3 && inde == 3) {
+				var optio0 = document.createElement("option");
+				var tex0 = document.createTextNode("请选择城市...");
+				optio0.appendChild(tex0);
+				city.appendChild(optio0);
+				var optio1 = document.createElement("option");
+				var tex1 = document.createTextNode("哈瓦那");
+				optio1.appendChild(tex1);
+				city.appendChild(optio1);
+				var optio2 = document.createElement("option");
+				var tex2 = document.createTextNode("奥尔金");
+				optio2.appendChild(tex2);
+				city.appendChild(optio2);
+				var optio3 = document.createElement("option");
+				var tex3 = document.createTextNode("卡玛娃");
+				optio3.appendChild(tex3);
+				city.appendChild(optio3);
+			}
+		}
+		function dela_guo(){
+			var guo = document.getElementsByClassName("guo")[0];
+			guo.length=0;
+		}function dela_city(){
+			var city = document.getElementsByClassName("city")[0];
+			city.length=0;
+		}
+	</script>
+</html>

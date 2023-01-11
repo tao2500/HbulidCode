@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<<title>天高报名表</title>
+	<style>
+		.info{
+			position:relative;
+			width: 1050px;
+			/*border: 1px solid red;*/
+			margin: 0 auto;
+		}
+		.basic_info{
+			display: block;
+			margin: 10px 0;
+			font-size:46px;
+			font-weight: bold;
+			text-align: center;
+		}
+		img{
+			position:absolute;
+			right:5%;
+			border: 2px cyan;
+			display: block;
+			width: 280px;
+			height: 400px;
+			margin: 0 auto;
+			/*border:1px solid blue;*/
+		}
+		.info>div{
+			margin-top: 10px;
+		}
+		.short{
+			display: inline-block;
+			width: 280px;
+			height:40px;
+			line-height:10px;
+			font-size: 22px;
+			font-weight: bold;
+			text-align: left;
+		}
+		.shorttwo{
+			display: inline-block;
+			width: 280px;
+			height:40px;
+			line-height:30px;
+			font-size: 22px;
+			font-weight: bold;
+			text-align: left;
+			position: relative;
+			left: 250px;
+			top: -38px;
+		}
+		:nth-child{
+			display: inline-block;
+			width: 180px;
+			height:40px;
+			line-height:40px;
+			font-size: 22px;
+			font-weight: bold;
+			text-align: right;
+		}
+		.name, .grade, .majorClass, .born, .hobby, .phone, .choose{
+			display: inline-block;
+			height:30px;
+			font-size: 20px;
+		}
+		.resume,.experience,.futurePlan{
+			display: inline-block;
+			width:850px;
+			padding-top:6px;
+			line-height:32px;
+			vertical-align: top;
+			word-break: break-all;
+			font-size: 22px;
+		}
+		input{
+			position:absolute;
+			right:10%;
+			bottom: 10px;
+			width:100px;
+		}
+		.info{
+			width: 100%;
+			height: 600px;
+			/*background-color: #AAAAAA;*/
+		}
+		#pre{
+			position: relative;
+			left: 1150px;
+			top: 100px;
+			height: 25px;
+		}
+		#pri{
+			position: relative;
+			left: 1180px;
+			top: 100px;
+			height: 25px;
+		}
+		#btn{
+			position: relative;
+			top: 100px;
+			left: 1210px;
+
+		}
+		/*.butto{*/
+		/*	display: none;*/
+		/*}*/
+	</style>
+</head>
+<body>
+<div class="info">
+	<h1 class="basic_info">天高报名表</h1>
+	<img src="${pageContext.request.contextPath }/res/img/Btn_picture_nor@2x.png" alt="">
+	<div class="short">
+		<p>姓名：</p><span class="name"></span>
+
+		<p>专业班级：</p><span class="majorClass"></span>
+
+		<p>兴趣爱好：</p><span class="hobby"></span>
+		<p>技术意向：</p><span class="choose"></span>
+		<p>年级：</p><span class="grade">aaaaaaaaaaaaaaaa</span>
+		<p>出生年月：</p><span class="born">aaaaaaaaaaaaaaaa</span>
+		<p>手机号码：</p><span class="phone">aaaaaaaaaaaaaaaa</span>
+	</div>
+	<div>
+		<span class="short">个人简介&技能：</span>
+		<span class="resume"></span></div>
+	<div>
+		<span class="short">项目&工作经历：</span>
+		<span class="experience"></span></div>
+	<div>
+		<span class="short">未来规划：</span>
+		<span class="futurePlan"></span></div>
+</div>
+<div class="butto">
+	<input type="button" value="上一个" id="pre">
+	<input type="button" value="打印" id="pri">
+	<input type="button" value="下一个" id="btn">
+</div>
+
+
+	</body>
+		
+</html>

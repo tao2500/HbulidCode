@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+                         
+<html>
+	<head>
+		<meta charset="UTF-8">
+	</head>
+<body>
+
+<h1>input form 属性</h1>
+
+<p>form 属性指定输入元素所属的表单。 此属性的值必须等于它所属的form元素的 id 属性。</p>
+<form action="/demo/html/action_page.php" id="form1">
+  <label for="fname">First name: </label>
+  <input type="text" id="fname" name="fname"><br><br>
+  <input type="submit" value="提交">
+</form>
+
+<p>下面的 "Last name" 字段在 form 元素之外，但仍是表单的一部分。</p>
+
+<label for="lname">Last name:</label>
+<input type="text" id="lname" name="lname" form="form1">
+
+<hr />
+<Label FOR="InputBox"  accesskey="q">姓名</Label>
+                                               <!-- 热键按alt+设置的字母 -->
+<input ID="InputBox" type="text">
+
+</body>
+</html>

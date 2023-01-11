@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>高端且复杂 比较难且不常用</title>
+	</head>
+	<style type="text/css">
+		P{
+			width: 100px;
+			height: 100px;
+			background-color: antiquewhite;
+		}
+		p:hover{
+			animation-duration: 500ms;           <!--动画的变化时间为500ms-->
+			animation-delay: 200ms;              <!--动画延缓200ms变化-->
+			animation-iteration-count: infinite;  <!--动画循环次数为无数次 输入数字为循环多少次-->
+			animation-direction: alternate;       <!--动画第二次以反方向运行-->
+			animation-name: kinwenji;             <!--给该动画命名-->
+		}
+		@keyframes kinwenji {
+			     from{
+			     	width: 150px;
+			height: 150px;
+			background-color: yellow;                    <!--控制变换后不会到原位而回到该特定大小和颜色-->
+			     }
+			to{
+				width: 200px;
+				height: 200px;
+				background-color: #ffad2a;
+			}
+			from{}
+			to{}
+		}
+	</style>
+	<body>
+		<p></p>
+	</body>
+</html>

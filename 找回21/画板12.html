@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+	<script>
+		window.onload = test();
+		function person(name){
+			return{
+				getname: function(){
+					return name;
+				}
+			};
+		}("test");
+		function test(){
+			person();
+			console.log(person.getname());
+		}
+		
+	</script>
+</html>

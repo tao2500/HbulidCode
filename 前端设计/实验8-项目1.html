@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>vue过滤器</title>
+		<style>
+			.active{
+				font-size: 28px;
+				color: red;
+			}
+		</style>
+		<script src="js/vue.js">
+			Vue.config.productionTip = false;
+		</script>
+	</head>
+	<body>
+		<h1>过滤器应用1-大小写字母转换</h1>
+		<hr />
+		<div id="one">
+			<p>原信息：{{message}}</p>
+			<p>大写信息:{{message | filonea}}</p>
+			<p>先小写、再首字母大写信息：{{message | filoneb | filonec}}</p>
+			<h1>过滤器应用2-人民币/美元符号转换</h1>
+			<hr />
+			<p>总量：{{total | filoned}}</p>
+			<p>单价：{{money | filoned}}</p>
+			<b>总价：{{totall() | filonee}}</b>
+			<h1>过滤器应用3-样式属性绑定</h1>
+			<hr />
+			<b v-bind:class="{ 'active': myClass }">绑定class-active字体大小28px、颜色为红色</b>
+		</div>
+	</body>
+	<script>
+	var vm = new Vue({
+			el:'#one',
+			data:{
+				message: "This is a Book.",
+				myClass: 'activeA',
+				money: 123.224,
+				total: 100
+			},
+			filters:{
+				filonea:function(mass){
+					if(!mass)return '';
+					var masss = mass.toString();
+					var daxie = masss.toUpperCase();
+					return daxie;
+				},
+				filoneb:function(mass){
+					if(!mass)return '';
+					var xiaoxie = mass.toString().toLowerCase();
+					return xiaoxie;
+				},
+				filonec:function(mass){ 
+					if(!mass)return '';
+					var arr=mass.split(' ');
+					for(var i=0;i<arr.length;i++){
+						arr[i]=arr[i].charAt(0).toUpperCase()+arr[i].slice(1)
+					};
+					return arr;
+				},
+				filoned:function(mass){
+					if(!mass)return '';
+					return '¥'+mass;
+				},
+				filonee:function(mass){
+					if(!mass)return '';
+					return '$'+mass;
+				}
+			},
+			methods:{
+				totall:function(){
+					return this.total*this.money;
+				}
+			}
+		})
+	</script>
+</html>

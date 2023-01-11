@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>while 循环语句</title>
+		<script>
+			var pwd = prompt("请输入你的密码:","");
+
+			while(pwd !== "123456"){    <!--while语句当条件为真时一直执行 (!== 为不等于的意思)-->
+				pwd = prompt("密码输入错误，请重新输入:","");   
+			}
+			if(pwd == "123456"){
+				document.write("登录成功！")
+			}
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

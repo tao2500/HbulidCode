@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>P29</title>
+		<script src="js/vue.js">
+			Vue.config.productionTip = false;
+		</script>
+	</head>
+	<body>
+		<fieldset class="kuang" >
+			<legend>学生信息</legend>
+			姓名：<input type="text" placeholder="姓名" v-model="User.name" /><br />
+			<hr />
+			省份：<input type="text" placeholder="省份" v-model="User.province" @keyup="getAddress()"/><br />
+			城市：<input type="text" placeholder="城市" v-model="User.city" @keyup="getAddress()"/><br />
+			县、区或街道：<input type="text" v-model="User.street"  @keyup="getAddress()"/><br />
+			家庭地址：{{User.address}}<br />
+			<input type="button" value="提交" />
+			<input type="button" value="重置" />
+			<br />
+		</fieldset>
+	</body>
+	<script>
+		new Vue({
+			el:'.kuang',
+			data:{
+				User:{
+					name:'',
+					province:'',
+					city:'',
+					street:'',
+					address:''
+				}
+				
+			},
+			methods:{
+				getAddress:function(){
+//					alert("ok"),
+					this.User.address = this.User.province+this.User.city+this.User.street
+//					alert("ok")
+				}
+			},
+			watch:{
+				'User' :{
+					handler:function(){
+					this.User.province = "广东",
+					this.User.city = "广州",
+					this.User.street = "花都区",
+					getAddress()
+					},
+				deep: true
+				}
+			}
+		})
+	</script>
+</html>

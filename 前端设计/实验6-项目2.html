@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>vue von</title>
+		<script src="js/vue.js"></script>
+	</head>
+	<body>
+		<div id="di">
+			<input type="button" value="-" v-on:click="Sub()"> 
+			{{number}}
+			<input type="button" value="+" v-on:click="Add()">
+		</div>
+	</body>
+	<script>
+		new Vue({
+			el:"#di",
+			data:{
+				number:0,
+			},
+			methods: {
+				Add:function(){
+					return this.number = this.number+1
+				},
+				Sub:function(){
+					return this.number = this.number-1
+				}
+			}
+		})
+	</script>
+</html>

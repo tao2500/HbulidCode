@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>属性节点测试</title>
+		<style>
+			.test{
+				background-color: #AAAAAA;
+			}
+			.cla{
+				color: #ADFF2F;
+			}
+			.clas{
+				font-size: 80px;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="test"></div>
+		<script>
+			var sourc = document.getElementsByClassName("test")[0];
+			var p = document.createElement("p");
+			p.setAttribute("class","cla");//设置元素节点
+//			p.className = "clas";
+			p.name = "ok"; 
+			var test = document.createTextNode("这是一个文本节点！");
+			p.appendChild(test);
+			sourc.appendChild(p);
+		</script>
+	</body>
+</html>

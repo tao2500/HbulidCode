@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background-image: url(界面.jpg);
+            background-size: cover;
+        }
+        @font-face{
+            font-family: aa;
+            src: url(jf\ Open粉圆-1.1.ttf);
+        }
+        @font-face {
+            font-family: bb;
+            src: url(仓耳舒圆体W03.ttf);
+            font-weight: bold;
+        }
+        .center {
+            width: 50%;
+            height: 65vh;
+
+            background-color: rgb(239, 243, 225, 0.6);
+            text-align: center;
+            margin: 120px auto;
+            border-radius: 50px;
+        }
+        fieldset{
+            border: none;
+
+        }
+
+        fieldset legend{
+            font-family: aa;
+            font-weight: bold;
+            font-size: 50px;
+            color: rgb(157, 210, 231);
+            text-align: center;
+        }
+        label{
+            font-family: bb;
+            font-weight: bold;
+            font-size: 30px;
+        }
+        input{
+            border: none;
+            outline: none;
+            background-color: transparent;
+        }
+        .input{
+            background-image: url(input_bg.png);
+            background-repeat: no-repeat;
+            line-height: 40px;
+        }
+        .radio{
+            font-family: aa;
+            font-size: 30px;
+        }
+        .gray{
+           color: gray;
+           text-align: center;
+        }
+        .button{
+            font-size: 30px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="center">
+       
+            <form action="#" method="post">
+                <fieldset>
+                    <legend>图书管理系统</legend>
+
+                    <p>
+                        <label>
+                            请输入账号：<input type="text" name="username" class="input" size="35px" required>
+                        </label>
+                    </p>
+                    <p>
+                        <label>
+                            请输入密码：<input type="password" name="pwd" class="input" size="35px" required>
+                        </label>
+                    </p>
+                    <p class="radio">
+                        身份：
+                        学 生<input type="radio" value="student" checked>
+                        教 师<input type="radio" value="teacher">
+                        管理员<input type="radio" value="administrator">
+                    </p>
+                    <input  class="button" type="submit" value="登录">
+                </fieldset>
+            </form>
+    </div>
+    <footer>
+        <p class="gray">© 2021-12-9 软导作业 </p>
+    </footer>
+
+    
+   
+</body>
+
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			@import url("global.css");
+			.one{
+				font-family: simsun;  /*定义宋体"有衬线"*/
+			}
+			.two{
+				font-family: "微软雅黑";  /* 无衬线*/
+			}
+			.three{
+				font-family: "微软雅黑",serif;
+			}
+			.four{
+				font-family: simsun",sans-serif;
+			}
+			.five{
+				font-weight: normal;
+			}
+			.six{
+				font-weight: 800;
+			}
+			h1{
+				outline: 1px solid red;
+				text-indent: -80px;
+			}
+		</style>
+	</head>
+	<body>
+		<p class="one">这是一个中文加english的句子</p>
+		<p class="two">这是第二段中文加english的句子</p>
+		<p class="three">这是一个中文加english的句子定义微软雅黑，但有衬线</p>   <!--无效，依然无衬线-->
+		<p class="four">这是一个中文加english的句子定义宋体，但无衬线</p>
+		<p class="five">ceshi</p>
+		<p class="six">字重的精确控制</p>
+		<i>测试</i>
+		<p style="text-decoration: overline">划线文字</p>
+		<h1>aa</h1>
+		<input />
+		<button>
+			
+		</button>
+		
+		<select>
+			<option>q</option>
+			<option>qq</option>
+		</select>
+		<input text="d" placeholder="1122" />
+		<datalist id="d">
+			<option value="11">1</option>
+			<option value="22">2</option>
+		</datalist>
+		<p>这是一段中文，你看得懂吧</p>
+		<a target="_blank">
+			
+		</a>
+	</body>
+	<!--<script>
+		var a = document.getElementsByTagName("button")[0];
+		var style = window.getComputedStyle(a);
+		alert(style.display);
+	</script>-->
+</html>

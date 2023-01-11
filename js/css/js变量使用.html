@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>变量使用方法</title>
+		
+		<!--样式1-->
+		<script>
+			var Number = 100
+			document.write(Number)         <!--相当于body中输入100-->       
+		</script>
+		
+		<!--样式2-->
+		<script>
+			var Number=100
+			Number=Number+200                        <!--新number=旧number+100 此时为300-->         
+			document.write("<h1>"+Number+"</h1>")    <!--相当于文本加上h1的效果-->
+		</script>
+		
+		<!--样式3-->
+		<script>
+			var Number=100
+			Number=Number+"200"                        <!--显示旧值加新值 此时为100200-->         
+			document.write("<h1>"+Number+"</h1>")   
+		</script>
+		
+			<!--样式4-->
+		<script>
+			var Number=100
+			Number=200                       <!--显示为新number值200-->         
+			document.write("<h1>"+Number+"</h1>")   
+		</script>
+		
+			<!--样式5-->
+		<script>
+			var name=prompt("你的名字是:","")              <!--弹出对话框输入内容后到body-->
+			document.write("<h1>"+name+"</h1>")   
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

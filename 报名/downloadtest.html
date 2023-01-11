@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<a href="SignUpPC.css" download="好名字.jpg">下载</a>
+		<p>this is test</p>
+		<hr />
+		<input type="button" value="下载" onclick=""/>
+		<!--<script src="js/download.js"></script>-->
+		<!--<script src="js/xiazai.js"></script>-->
+		<p>aaaa  aaa</p>
+		<p>aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa<blockquote></blockquote>aaaaaaaaaaaaaaaaaaaaaaaaa</p>
+		<blockquote> 首行缩进？aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa<blockquote>test</blockquote></blockquote>
+	</body>
+</html>
+
+
+
+
+<!--// 创建a标签
+let a = document.createElement('a')
+// 定义下载名称
+a.download = '文件名称'
+// 隐藏标签
+a.style.display = 'none'
+// 设置文件路径
+a.href = 'https://.../158ac1e6917445a4aa384a2a7209445a.xlsx'
+// 将创建的标签插入dom
+document.body.appendChild(a)
+// 点击标签，执行下载
+a.click()
+// 将标签从dom移除
+document.body.removeChild(a)-->
+	
+	
+	<!--Edge 13在尝试下载data url链接时会崩溃。
+Chrome 65及以上版本只支持同源下载链接。
+Firefox只支持同源下载链接。
+基于上面描述，如果你尝试下载跨域链接，那么其实 download的效果就会没了
+，跟不设置 download表现一致。即浏览器能预览的还是会预览，而不是下载。-->
+
+<!--https://cloud.tencent.com/developer/article/1609838-->

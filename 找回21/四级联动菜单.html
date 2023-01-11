@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>联动菜单</title>
+	</head>
+	<body>
+		<form method="post" name="form">
+			<select name="select1"></select> 
+			<select name="select2"></select> 
+			<select name="select3"></select> 
+		</form>
+		
+		<script>
+			var neirong1 = ["英语","李秀萍,傅昭仪","A12-455","周二12节"];
+			var neirong2 = ["高等数学","张三霎,傅仪","A2-185","周二34节"];
+			var neirong3 = ["物理","李云龙,刘华强","A8-155","周日1234节"];
+			var select1 = document.getElementsByName("select1")[0];
+			var select2 = document.getElementsByName("select2")[0];
+			var select3 = document.getElementsByName("select3")[0];
+			var re = new RegExp(",");
+		</script>
+	</body>
+</html>

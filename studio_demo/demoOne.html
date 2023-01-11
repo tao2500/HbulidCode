@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>获取本机时间</title>
+		<style>
+			.content{
+				width: 100%;
+				height: 200px;
+				background-color: gray;
+				text-align: center;
+			}
+			input{
+				width: 70px;
+				height: 40px;
+				vertical-align: auto;
+				text-align: center;
+				margin: 50px 0 0 0;
+			}
+			h1{
+				color: azure;
+				position: relative;
+				top: 50px;
+			}
+			big{
+				color: azure;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="content">
+			<h1>当前时间</h1>
+			<input type="text" id="hour" value="" readonly/>
+			<big>点</big>
+			<input type="text" id="minute" value="" readonly/>
+			<big>分</big>
+			<input type="text" id="second" readonly/>
+ 			<big>秒</big>
+ 			<input type="button" name="" id="" value="暂停" onclick="suspend()"/>
+		</div>
+		<script src="js/demoOne.js"></script>
+	</body>
+</html>

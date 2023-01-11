@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>深大校内搜索</title>
+		<style type="text/css">
+			.div{
+				text-align: center;
+				}
+				.img{
+					vertical-align: middle; 
+					margin-top: 15px;
+				width: 600px;
+				height: 600px;
+				}
+				html:hover .img{
+			    	animation-name: img;
+			    	animation-delay: 500ms;
+			    	animation-duration: 1s;
+			    	animation-fill-mode: forwards;
+			    	}
+			    	@keyframes img{
+			    	from{}
+			    	to{
+			    		width: 100px;
+			    		height: 100px;
+			    		margin-top: 0px;
+			    		
+			    	}
+			    }
+			p{
+				font-family: "微软雅黑";
+				font-size: 40px;
+				text-shadow: 1px 1px 2px #b0b0b0;
+				opacity: 1;  <!--透明度指示针 输入0-1 -->
+			}
+			html:hover P{
+				transition-delay: 2s;
+				transition-duration: 1s;
+				font-family: "微软雅黑";
+				font-size: 10px; 
+				text-shadow: 1px 1px 2px #b0b0b0;
+				opacity: 0;  
+			}
+		</style>
+	</head>
+	<body>
+		<div class="div">
+			<img src="深大logo.png" class="img" />
+			<p class="p">深大校园快捷搜索</p>
+			<input type="search" placeholder="请输入内容"> 
+				<input type="button" value="搜索">
+			</div>
+	</body>
+</html>

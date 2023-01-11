@@ -1,0 +1,213 @@
+body{
+	width: 100%;
+	
+	background-image: url(../img/bg.png);
+	background-size: cover;
+	background-repeat: no-repeat;
+	z-index: 1;
+} 
+.form{
+	height:98vh;
+	width: 100%;
+	z-index: 1;
+}
+.area{
+	clear:both;
+	width: 25%;
+	height: 81%;
+	float: left;
+	position: relative;
+	top: 7vh;
+	left: 37%;
+}
+
+#photo{
+	clear: both;
+	font-size: 2vh;
+	width: 12%;
+	height: 20%;
+	float: left;
+	position: absolute;
+	top: 11vh;
+	left: 42%;
+	color: #D64CEE;
+	display: block;
+}
+
+h4{
+	background-image: url(../img/input_bg.png);
+}
+input{
+	font-size: 2vh;
+	height: 4.5vh;
+	width: 33.5vh;
+	border: none;
+	background-image: url(../img/input_bg.png);
+	background-repeat: no-repeat;
+	border-width: inherit;
+	color: #D64CEE;
+} 
+#aa{
+	float: left;
+	text-decoration:none;
+	font-style: initial;
+	font-size: 3vh;
+	position: relative;
+	clear: left;
+	top: 3vh;
+	left: 58%;
+	color: black;
+	display: block;
+}
+
+}
+.verification{
+	width: 350px;
+	height: 350px;
+	background-color:  white;
+	border: 1px,solid,black;
+	border-radius: 10px;
+	position: relative;
+	top: 42vh;
+	right: -33vh;
+}
+
+.submit{
+	border: none;
+	width: 163px;
+	height: 40px;
+	font-family: "微软雅黑";
+	color: #FBFBFB;
+	background-image: url(../img/button_bg.png);
+	background-color: #FEFBE6;
+	position: absolute;
+	top: 35vh;
+	left: 14vh;
+}
+
+#input{
+	text-align: center;
+	width: 34vh;
+	height: 4.5vh;
+	float: left;
+	clear: left;
+	background-image:url(../img/input_bg.png);
+	position: relative;
+	top: 20px;
+	left: 50px;
+}
+
+#output{
+	font-size: 20px;
+	text-align: center;
+	align-content: center;
+	color: black;
+	width: 177px;
+	height: 40px;
+	background-image: url(../img/message_bg_choose_1.png);
+	float: left;
+	position: relative;
+	top: 4vh;
+	left: 1vh;
+}
+
+#result{
+	color: red;
+	font-size: 13px;
+	float: left;
+	clear: left;
+	position: relative;
+	top: 35px;
+	left: 110px;
+}
+
+.ok{
+	float: left;
+	clear: left;
+	position: relative;
+	top: 37vh;
+	left: 98vh;
+}
+
+
+.input{
+	border: none;
+	background-color: #FEFBE6;
+	background-image: url(../img/message_bg.png);
+	background-repeat: no-repeat;
+	width: 48.8vh;
+	height: 17.3vh;
+	resize: none;
+}
+
+#drop_down_menu{
+	color: #FF0000;
+	border: none;
+	background-image: url(../img/message_bg_choose_1.png);
+	background-repeat: no-repeat;
+	background-color: #FEFBE6;
+	width: 177px;
+	height: 38px;
+}
+#menu{
+	clear: all;
+	background-image: url(../img/message_bg_choose_2.png);
+	background-clip: initial;
+	width: 18vh;
+	height: 23vh;
+	z-index: 2;
+	position: relative;
+	top: 42vh;
+	right: -39vh;
+	text-align: center;
+}
+object{
+	height: 30px;
+	width: 182px;
+}
+#menu p{
+	display: inline;
+	white-space:nowrap;
+}
+#menu p:hover{
+	background-image: url(../img/message_bg_choose_pre.png);
+}
+
+
+.next{
+	font-size: 3vh;
+	position: absolute;
+	top: 36vh;
+	right: 117vh;
+}
+
+
+.submit{
+	border: none;
+	width: 163px;
+	height: 40px;
+	font-family: "微软雅黑";
+	color: #FBFBFB;
+	background-image: url(../img/button_bg.png);
+	background-repeat: no-repeat;
+	background-color: #FEFBE6;
+}
+
+#open2{
+	position:relative;
+	clear: both;
+	left: 36vh;
+	top: -103.5vh;
+	display: none;
+}
+.footer{
+	font-size: 2vh;
+	clear: both;
+	position: absolute;
+	left: 80vh;
+	top: 88vh;
+	
+
+html * {
+    outline: 1px solid red
+}

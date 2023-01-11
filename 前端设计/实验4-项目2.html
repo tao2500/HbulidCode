@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			.content{
+				text-align: center;
+				background-color: #5F9EA0;
+			}
+			.title{
+				font-size: 30px;
+			}
+			.contentt{
+				font-size: 20px;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="content">
+			<div class="title"> 
+				DATA的处理
+			</div>
+			<br />
+			<div class="contentt">
+				当前时间：<span class="time"></span>
+				<br />
+				您已登录，累计时间：<span class="time1"></span>
+			</div>
+		</div>
+	</body>
+	<script>
+		window.onload = gettime();
+		var myBell;
+		var loadTime;
+		
+		var show = document.getElementsByClassName("time")[0];
+		var showw = document.getElementsByClassName("time1")[0];
+		function gettime(){
+			loadTime = new Date()
+			sayhello();
+			setcolo();
+			myBell = window.setInterval(function(){settime()},1000);
+		}
+		function settime(){
+			var now = new Date();
+			show.innerHTML =now.toLocaleString();
+			var difference = now - loadTime;
+//			console.log(difference);
+			var sec = Math.floor(difference/1000);
+			var min = Math.floor(difference/(1000*60));
+			var hou = Math.floor(difference/(1000*60*60));
+			showw.innerHTML = hou+"时"+min+"分"+sec+"秒";
+		}
+		function sayhello(){
+			var hourse = loadTime.getHours();
+//			alert(hourse);
+			switch(hourse){
+				case 0:
+				case 1:
+				case 2:
+				case 3:
+				case 4:
+				case 5: document.title = "晚上好";
+				break;
+				case 6:
+				case 7:
+				case 8:
+				case 9:
+				case 10:
+				case 11: document.title = "早上好";
+				break;
+				case 12:
+				case 13:
+				case 14:
+				case 15:
+				case 16:
+				case 17: document.title = "中午好";
+				break;
+				case 18:
+				case 19:
+				case 20:
+				case 21:
+				case 22:
+				case 23: document.title = "晚上好";
+			}
+		}
+		function setcolo(){
+			var month = loadTime.getMonth();
+			for(iii=0;iii<12;iii++){
+				if(month>=0 && month<=2){
+					month+=1;
+					document.getElementsByTagName("body")[0].style.backgroundColor="green";
+					alert("现在是"+month+"月，是春天！color=green");
+					break;
+				}else if(month>=3 && month<=5){
+					month+=1;
+					document.getElementsByTagName("body")[0].style.backgroundColor="red";
+					alert("现在是"+month+1+"月，是夏天！color=red");
+					break;
+				}else if(month>=6 && month<=9){
+					month+=1;
+					document.getElementsByTagName("body")[0].style.backgroundColor="yellow";
+					alert("现在是"+month+1+"月，是秋天！color=yellow");
+					break;
+				}else if(month>=10 && month<=12){
+					month+=1;
+					document.getElementsByTagName("body")[0].style.backgroundColor="darkturquoise";
+					alert("现在是"+month+1+"月，是冬天！color=darkturquoise");
+					break;
+				}
+			}
+		}
+	</script>
+</html>

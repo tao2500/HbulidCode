@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+	<title>学生管理系统</title>
+	<meta charset="UTF-8">
+	<style>
+		body {
+			background-color: burlywood;
+		}
+		button {
+			width: 200px;
+			height: 50px;
+			font-size: 16px;
+			color: coral;
+			margin: 5px 10px;
+			border-radius: 15px
+		}
+		.queryAll {
+			display: none;
+		}
+	</style>
+</head>
+<body>
+	<h1>欢迎使用学生管理系统</h1>
+	<h2></h2>
+	<fieldset class="kuang" >
+		<legend>请选择你要是用的功能</legend>
+		<h2>Welcome ^_^</h2>
+		<button onclick="request()">查询所有学生</button>
+		<button>按学号查询学生</button>
+		<br />
+		<button>添加学生</button>
+		<button>修改学生信息</button>
+		<button>删除学生</button>
+	</fieldset>
+	
+	<div class="queryAll">
+		<h2>查询到的所有信息如下：</h2>
+		<table class="table">
+			<tr>
+				<th>学号</th>
+				<th>姓名</th>
+				<th>年龄</th>
+				<th>性别</th>
+			</tr>
+				<?php
+				   // 根据ip获得sql的连接
+				   $servername = "localhost";
+				   $username = "root";
+				   $password = "123456MySql@!.";
+				   $dbname = "school";
+				   $con = new mysqli($servername, $username, $password, $dbname);
+				   if ($con->connect_error) {
+				       echo "连接失败: " . $con->connect_error . "<br>";
+				   } else {
+				   }
+					$sql = "select * from student";
+					$result =  mysqli_query($con, $sql);
+					echo "<tr>";
+					while($row = mysqli_fetch_array($result)) {
+					echo "<td>".$row['id']."</td>";
+					echo "<td>".$row['name']."</td>";
+					echo "<td>".$row['age']."</td>";
+					echo "<td>".$row['gender']."</td>";
+					}
+					echo "</tr>";
+					       $con->close(); 
+			   ?>
+		</table>
+		
+	</div>
+</body>
+<script>
+	function request(){
+		var reque = document.getElementsByClassName("queryAll")[0];
+		reque.setAttribute("style",'display: inline');
+	}
+</script>
+</html>

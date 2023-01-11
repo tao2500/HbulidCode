@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>按钮修饰符的应用</title>
+		<script src="js/vue.js"></script>
+	</head>
+	<body>
+		<div id="content">
+			<span>编号：<input type="text" v-on:click.enter.once="showid" v-model="id"/></span><br />
+			<span>姓名：<input type="text" v-on:keyup.enter="showname" v-model="name"/></span><br />
+			<span>电话：<input type="text" v-on:keyup.shift.enter="showtele" v-model="tele"/></span><br />
+			<span>密码：<input type="password" v-on:keydown.shift="showpass" v-model="pass"/></span><br />
+			
+		<br />
+		您的信息：<span v-if="bool1">编号：{{id}}</span>
+		<span v-if="bool2">姓名：{{name}}</span>
+		<span v-if="bool3">电话：{{tele}}</span>
+		<span v-if="bool4">密码：{{pass}}</span>
+		</div>
+	</body>
+	<script>
+		new Vue({
+			el:"#content",
+			data:{
+				id:'',
+				name:'',
+				tele:'',
+				pass:'',
+				bool1:false,
+				bool2:false,
+				bool3:false,
+				bool4:false
+			},
+		methods:{
+			showid: function(){
+				this.bool1 =  this.bool1 == true ? false : true
+			},
+			showname: function(){
+				this.bool2 =  this.bool2 == true ? false : true
+			},
+			showtele: function(){
+				this.bool3 = this.bool3 == true ? false : true
+			},
+			showpass: function(){
+				this.bool4 = this.bool4 == true ? false : true
+			}
+		}
+		})
+	</script>
+</html>

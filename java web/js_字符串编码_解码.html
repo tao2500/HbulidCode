@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+
+<html>
+
+  <head>
+
+    <title>MyHtml.html</title>
+
+
+    <meta name="keywords" content="keyword1,keyword2,keyword3">
+
+    <meta name="description" content="this is my page">
+
+    <meta name="content-type" content="text/html;" charset="utf-8" >
+
+    
+
+    <!--<link rel="stylesheet" type="text/css" href="./styles.css">-->
+
+		<style type="text/css">
+			/*.test1{
+				background-color: #AAAAAA;
+				
+			}	
+			.testTwo{
+				background-color: #4CAF50;
+				display: inline-block;
+			}
+			.textFour{
+				background-color: #008000;
+				
+			}
+			img{
+				width: 600px !important;
+			}*/
+			
+			h3{
+				line-height: 30px;
+				font-size: 14px;
+			}
+			
+			.dot{
+				display: inline-block;
+				width: 100px; height: 100px;
+				padding: 10px;
+				border: 10px solid;
+				border-radius: 50%;
+				background-color: currentcolor;
+				background-clip: content-box;
+			}
+			.dot1{
+				display: inline-block;
+				width: 140px; height: 10px;
+				padding: 35px 0;
+				border-top: 10px solid;
+				border-bottom: 10px solid;
+				background-color: currentcolor;
+				background-clip: content-box;  
+			}
+		</style>
+
+  </head>
+
+  <!--<div class="test1">
+  	<p>我吹过你吹过的晚风</p>
+  	<div class="testTwo">
+  	你好，再见
+  	</div>
+  </div>
+  <div class="textFour" style="width: 500px;">
+  	
+  	
+  	
+  </div>-->
+
+  <body>
+	    <h3>test标题</h3>
+	    <div class="dot"></div>
+	    <div class="dot1"></div>
+	    <div>
+	    	<input type="text" class="text1" />
+	    	<input type="button" value="编码" onclick="transformation(get())"/>
+	    	<input type="button" value="解码" onclick="jiema(transformation(get()))"/>
+	    </div>
+	    <script>
+	    	function transformation(text){ //将字符串转为unicode格式。
+	    		var text = encodeURIComponent(encodeURIComponent(text));
+	    		//alert(text);
+	    		return text;
+	    	}
+	    	function get(){
+	    		var a=document.getElementsByClassName("text1")[0];
+	    		alert(a.value);
+	    		return a.value;
+	    	}
+	    	function jiema(){
+	    		
+	    	}
+	    </script>
+  </body>
+
+</html>
+
+<!--
+	作者：2500594037@qq.com
+	时间：2021-10-14
+	描述：在java中转回中文用如下代码      https://blog.csdn.net/csdnluolei/article/details/84973847
+	String data = request.getParameter("data");
+ 
+data = java.net.URLDecoder.decode(data, "UTF-8");
+-->

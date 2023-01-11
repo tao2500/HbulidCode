@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8" rel="stylesheet" type="text/css">
+		<title>next</title>
+		<link href="css/申请表next.css" rel="stylesheet" type="text/css "/>
+	</head> 
+	<body> 
+		<div class="form">
+			<img src="img/main_bg_1.png" class="area"/>
+		</div>
+		<img src="img/web__jiantou_shang.png" style="position: relative; top: 277px; left: 1052px; display: none;" id='return' onclick="noshow()";/>
+		<span id="menu" style="display: none;">
+			<br />
+				<p onclick="web()">前端</p>
+				<br />
+				<p onclick="backstage()">后端</p>
+				<br />
+				<p onclick="ui()">ui端</p>
+				<br />
+				<p onclick="Andorra()">安卓端</p>
+				<br />
+				<p onclick="ios()">ios端</p>
+				<br />
+				<p onclick="management()">项目管理端</p>
+			</span>
+		<div class="next">
+			
+			<input type="text" value="技术意向" readonly="readonly" id="drop_down_menu" onclick="show()"/>
+			<img style="position: relative; left: -23px; display: inline-block;" src="img/web__jiantou_xia.png" onclick='show()' id="open"/>
+			
+			<br /><br />
+			<textarea rows="20" class="input" style="color: #D64CEE;">个人介绍&技能</textarea>
+			<br /><br />
+			<textarea class="input" style="color: #8A2BE2;";>项目&工作技能</textarea>
+			<br /><br />
+			<textarea class="input" style="color: #008000;">未来计划</textarea>
+			<br />
+			<input type="submit" value="确定" class="submit" style="position: relative; top: 50px; left: 90px;" onclick="openNext()"/>  
+		</div>
+		<div class="footer">
+			<p>&copy; 天高科技工作室    &nbsp;&nbsp;&nbsp;&nbsp; 联系我们：13138047388</p>
+		</div>
+		<script type="text/javascript" src="js/报名表.js" ></script>
+	</body> 
+</html>
+

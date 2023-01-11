@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="js/vue.js"></script>
+    <style>
+        .box{
+            width: 200px;
+            height: 500px;
+            text-align: center;
+        }
+        h3{
+            line-height: 20px;
+            
+        }
+        .line{
+            width: 160px;
+            height: 10px;
+            margin: 10px auto;
+            border: rgb(34, 42, 49) solid 2px;
+        }
+        .innerColor{
+            height: 100%;
+            background-color: brown;
+        }
+    </style>
+</head>
+<body>
+    <div id="app">
+        <div class="box">
+            <img :src="url" alt="">
+            <br>
+            <span>{{state}}</span>
+            <div class="line">
+                <div class="innerColor" :style="{width:health+'%'}"></div>
+            </div>
+            <div class="btns">
+                <button @click="hit">敲瓶子</button>
+                <button @click="restar">重新开始</button>
+            </div>
+        </div>
+    </div>
+    <script>
+        var app=new Vue({
+            el:'#app',
+            data() {
+                return {
+                    url:'./img/实验12/001.png',
+                    state:' ',
+                    health:0
+                }
+            },
+            methods: {
+                hit(){
+                    this.health+=20
+                    if(this.health==100){
+                        this.health=0
+                        this.state='瓶子敲碎了'
+                        this.url='./img/实验12/002.png'
+                    }
+                },
+                restar(){
+                    this.health=0
+                    this.url='./img/实验12/001.png'
+                    this.state=''
+                }
+            },
+        })
+    </script>
+</body>
+</html>

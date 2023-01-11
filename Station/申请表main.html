@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8" rel="stylesheet" type="text/css">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+		<title>TenTcoo报名表</title>
+		<link href="css/申请表.css" rel="stylesheet" type="text/css"/>
+	</head>
+	<body>
+		
+		<div class="form">
+			<img src="img/main_bg_1.png"/ class="area">
+			
+			<div id="photo">
+				<h1 style="clear:both; position: relative; left: 35%; height:30% width: 55% ">基本信息</h1>
+				<img src="img/box_photo_new.png" style="width: 15vh; position: relative; left: 37%;top: -1vh;"/>		
+				
+				<input type="text" value=" 姓名：">
+		
+				<input value=" 年级："></input>
+			
+				<input type="text" value=" 专业年级：">
+				<input type="text" value=" 出生年月日：" placeholder="例：1990.11.23"/>
+			
+				<input type="text" value=" 兴趣爱好：">
+			
+				<input type="text" value=" 联系方式："/>
+				
+		</div>
+		
+		<div>
+			<a id="aa" onclick="next()">NEXT</a>
+		</div>
+			
+		<div id="open2">
+			
+			<img src="img/web__jiantou_shang.png" ;/>
+			<span id="menu" style="display: none;">
+				<br />
+				<p onclick="web()">前端</p>
+				<br />
+				<p onclick="backstage()">后端</p>
+				<br />
+				<p onclick="ui()">ui端</p>
+				<br />
+				<p onclick="Andorra()">安卓端</p>
+				<br />
+				<p onclick="ios()">ios端</p>
+				<br />
+				<p onclick="management()">项目管理端</p>
+			</span>
+			<div class="next">
+				<input type="text" value="技术意向" readonly="readonly" id="drop_down_menu" onclick="show()"/>
+				<img style="position: relative; left: -3vh; display: inline-block;" src="img/web__jiantou_xia.png" onclick='show()' id="open"/>
+				
+				<br /><br />
+				<textarea class="input" style="color: #D64CEE;">个人介绍&技能</textarea>
+				<br />
+				<textarea class="input" style="color: #8A2BE2;";>项目&工作技能</textarea>
+				<br />
+				<textarea class="input" style="color: #008000;" onresize="Node">未来计划</textarea>
+				<br />
+				<!--<input type="submit" value="确定" class="submit" style="position: relative; top: 2vh; left: 14vh;" onclick="openNext()"/> --> 
+				<input type="submit" value="确定" class="submit" style="position: relative; top: 2vh; left: 14vh;" onclick=";yes();setOutput()"/>
+			</div>
+		</div>
+		
+		<div class="footer">
+			<p>&copy; 天高科技工作室    &nbsp;&nbsp;&nbsp;&nbsp; 联系我们：13138047388</p>
+		</div>
+		
+		<script type="text/javascript" src="js/报名表.js" ></script>
+	</div>
+	</body> 
+</html>

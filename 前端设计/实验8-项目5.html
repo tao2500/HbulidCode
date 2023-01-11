@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>v-for遍历数组内容p51</title>
+		<script src="js/vue.js">
+			Vue.config.productionTip = false;
+		</script>
+	</head>
+	<body>
+		<div id="app">
+			<h2>评选出今年最火的几个人：</h2>
+			<ul>
+				<li v-for="li in Obj">{{li}}</li>
+			</ul>
+			<br />
+			<ul>
+				<li v-for="(li,index) in Obj">{{index}}--{{li}}</li>
+			</ul>
+		</div>
+	</body>
+	<script>
+		new Vue({
+			el:"#app",
+			data:{
+				Obj: ['马云','马化腾','蔡徐坤','刘强东']
+			}
+		})
+	</script>
+</html>

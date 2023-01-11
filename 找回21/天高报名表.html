@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>天高报名表</title>
+		<style>
+			h1{
+				text-align: center;
+				font-weight: bolder;
+			}
+			img{
+				float: right;
+				display: block;
+				margin: 5px;
+				width: 280px;
+				height: 400px;
+				/*border:1px solid blue;*/
+			}
+			.content{  //内容框
+				border: 30px solid red;
+				background-color: #DDDDDD;
+			}
+			.short{
+				display: inline-block;
+				line-height:55px;
+				font-size: 22px;
+				font-weight: bold;
+				text-align: left;
+			}
+			#content{  //姓名框
+				display: block;
+				background-color: gray;
+			}
+			.bigcontent{
+				/*background-color: gray;*/
+				display: block;
+				position: relative;
+				top: 0px;
+			}
+			.name, .grade, .majorClass, .born, .hobby, .phone, .choose{
+				display: inline-block;
+				font-size: 20px;
+			}
+			.resume,.experience,.futurePlan{
+				display: inline-block;
+				width:850px;
+				padding-top:6px;
+				line-height:32px;
+				vertical-align: top;
+				word-break: break-all;
+				font-size: 22px;
+			}
+			.button{
+				text-align: center;
+				position: relative;
+				top: 30px;
+			}
+			.center{
+				width: 850px;
+				position: relative;
+				left: 20%;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="center">
+		<h1>天高报名表</h1>
+		<div class="content">
+			<img src="${pageContext.request.contextPath }/res/img/Btn_picture_nor@2x.png" alt="">
+			<div class="short" id="content">
+				姓名：<span class="name"></span><br />
+				年级：<span class="grade">aaaaaaaaaaaaaaaa</span><br />
+				专业班级：<span class="majorClass"></span><br />
+				出生年月：<span class="born">aaaaaaaaaaaaaaaa</span><br />
+				兴趣爱好：<span class="hobby"></span><br />
+				手机号码：<span class="phone">aaaaaaaaaaaaaaaa</span><br />
+				技术意向：<span class="choose"></span><br />
+				
+			</div>
+			<div class="bigcontent">
+						<span class="short">个人简介&技能：</span>
+						<span class="resume">一些技能技能技能技能技能技能技能技能技能</span><br />
+						<span class="short">项目&工作经历：</span>
+						<span class="experience">技能技能技能技能技能技能技能技能技能技能</span><br />
+						<span class="short">未来规划：</span>
+						<span class="futurePlan">技能技能技能技能技能技能技能技能技能技能技能技能技能技能技能技能技能技能技能技能技能技能技能技能</span>
+			</div>
+		</div>
+		<div class="button">
+			<input type="button" value="上一个" id="return">
+			<span>第<ppp> </ppp>页/共<ppp> </ppp>页</span>
+			<input type="button" value="下一个" id="next">
+			<input type="button" value="打印" id="print">
+		</div>
+		</div>
+	</body>
+</html>

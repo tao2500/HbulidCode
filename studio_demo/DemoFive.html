@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>划过展示内容</title>
+		<style>
+			.top{
+				height: 23px;
+				background-color: #808080;
+			}
+			ul{
+				
+			}
+			li{
+				list-style: none;
+				float: left;
+				margin: 2px 10px;
+				cursor: default; 
+			}
+			li:hover{
+				background-color: cornflowerblue;
+			}
+			.two{
+				display: none;
+			}
+			.three{
+				/*position: relative;
+				top: -175px;*/
+				display: none;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="top">
+			<ul>
+				<li onmousemove="shouwone()" onmouseout="reduction()" onclick="changeOperation()">第一课  </li>
+				<li onmousemove="shouwTwo()" onmouseout="reduction()" onclick="changeOperation()">第二课  </li>
+				<li onmousemove="shouwthree()" onmouseout="reduction()" onclick="changeOperation()">第三课  </li>
+			</ul>
+		</div>
+		<div class="one">
+			<pre>
+网页特效原理分析
+响应用户操作
+提示框效果
+事件驱动
+元素属性与操作
+动手编写一个js特效
+引入函数
+网页皮肤效果
+展开/收缩播放列表效果
+			</pre>
+		</div>
+		<div class="two">
+			<pre>
+改变网页的背景颜色
+函数传参
+高重用性函数的编写
+126邮箱全选效果
+循环及遍历操作
+调试器的简单使用
+典型循环的构成
+for循环配合if判断
+className的使用
+innerHTML的使用
+夏娜印象效果
+数组
+字符串连接
+			</pre>
+		</div>
+		<div class="three">
+			<pre>
+js的组成
+js出现的位置、优缺点
+变量 类型 typtof
+闭包
+运算符
+程序流程控制
+命名规则
+函数详解
+定时器的使用 setinterval settimeout
+定时器的应用 站长导航效果
+定时器的应用 自动播放选项卡
+定时器的应用 数码时钟
+程序调试方法
+				
+			</pre>
+		</div>
+		<script src="js/DemoFive.js"></script>
+	</body>
+</html>

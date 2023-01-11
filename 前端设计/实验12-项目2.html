@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="js/vue.js"></script>
+    <style>
+        .box{
+            width: 300px;
+            height: 300px;
+            display: flex;
+        }
+        .left{
+            text-align: center;
+            width: 40%;
+        }
+        .right{
+            text-align: center;
+            width: 40%;
+        }
+        .mid{
+            width: 20%;
+            text-align: center;
+            margin: auto 0;
+        }
+        select{
+            text-align: center;
+            width: 100px;
+            height: 200px;
+        }
+    </style>
+</head>
+<body>
+    <div id="app">
+        <div class="box">
+            <div class="left">
+                <h3>可选职位</h3>
+                <select v-model="selected" multiple>
+                    <option v-for="name in jobName" :value="name">{{name}}</option>
+                </select>
+            </div>
+            <div class="mid">
+                <button @click="goRight">>></button>
+                <br>
+                <button @click="goLeft"><<</button>
+            </div>
+            <div class="right">
+                <h3>已选职位</h3>
+                <select v-model="selected2" multiple>
+                    <option v-for="name in selectedName" :value="name">{{name}}</option>
+                </select>
+            </div>
+        </div>
+    </div>
+    <script>
+        var app=new Vue({
+            el:'#app',
+            data() {
+                return {
+                    jobName:['演员','教师','公务员','公司职员','歌手','酒店管理'],
+                    selectedName:[],
+                    selected:[],
+                    selected2:[]
+                }
+            },
+            methods: {
+                goRight(){
+                    var newJobName=this.jobName
+                    for(let i=0;i<this.jobName.length;i++){
+                        for(let j=0;j<this.selected.length;j++)
+                        if(this.jobName[i]==this.selected[j]){
+                            this.selectedName.push(this.selected[j])
+                            newJobName.splice(i,1)
+                        }
+                    }
+                    this.jobName=newJobName
+                },
+                goLeft(){
+                    var newSelectedName=this.selectedName
+                    for(let i=0;i<this.selectedName.length;i++){
+                        for(let j=0;j<this.selected2.length;j++)
+                        if(this.selectedName[i]==this.selected2[j]){
+                            this.jobName.push(this.selected2[j])
+                            newSelectedName.splice(i,1)
+                        }
+                    }
+                    this.selectedName=newSelectedName
+                }
+            },
+        })
+    </script>
+</body>
+</html>

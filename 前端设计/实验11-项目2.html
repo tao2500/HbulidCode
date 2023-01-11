@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Tab栏切换</title>
+		<style>
+			#content{
+				width: 600px;
+				margin: 0 auto;
+			}
+			.tab{
+				font-size: 0;
+				width: 600px;
+			}
+			.tab a{
+				display: inline-block;
+				height: 40px;
+				line-height: 40px;
+				font-size: 16px;
+				width: 25%;
+				tw=text-align: center;
+				background: #5F9EA0;
+				color: #333;
+				text-decoration: none;
+			}
+			.tab .cur{
+				background: red;
+				color: #fff;
+			}
+			.tab-con div{
+				border: 1px solid #e7e7e7;
+				height: 400px;
+				padding-top: 20px;
+			}
+		</style>
+		<script src="js/vue.js"></script>
+	</head>
+	<body>
+		<div id="content">
+			<div class="tab">
+				<a href="#" @click="curid=0" :class="{'cur':curid === 0}">女装</a>
+				<a href="#" @click="curid=1" :class="{'cur':curid === 1}">鞋子</a>
+				<a href="javascript:;" @click="curid=2" :class="{'cur':curid === 2}">包包</a>
+				<a href="#" @click="curid =3" :class="{'cur':curid === 3}">男装</a>
+			</div>
+			<div class="tab-con">
+				<div v-show="curid === 0">
+					<img src="img/实验3/image21.jpg" width="100%" />
+				</div>
+				<div v-show="curid === 1">
+					<img src="img/实验3/image22.jpg" width="100%" />
+				</div>
+				<div v-show="curid === 2">
+					<img src="img/实验3/image23.jpg" width="100%" />
+				</div>
+				<div v-show="curid === 3">
+					<img src="img/实验3/image24.jpg" width="100%" />
+				</div>
+			</div>
+		</div>
+	</body>
+	<script>
+		new Vue({
+			el:"#content",
+			data:{
+				curid:2
+			}
+		})
+	</script>
+</html>

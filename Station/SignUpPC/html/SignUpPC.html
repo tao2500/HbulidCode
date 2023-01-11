@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title>天高工作室报名表</title>
+    <link href="../css/SignUpPC.css" rel="stylesheet" >
+</head>
+<body>
+    <div class="main">
+        <img src="../img/main_bg_1.png" alt="allBg" class="AllBg">
+        <div id="PageOne">
+            <h2>基本信息</h2>
+            <div  class="emOut">
+                    <input type="file" name="PhotoInput" id="PhotoInput" accept= image/*>
+                <label class="file-btn" for="PhotoInput" >
+                    <img src="../img/box_photo_new.png" alt="imgPhoto" id="Photo">
+                </label>
+            </div>
+            <div class="InputOut">
+                <div class="BornOut">
+                    <span class="OutText">姓名:</span>
+                    <input type="text" alt="Name" id="Name" value="" maxlength="4">
+                </div>
+                <div class="BornOut">
+                    <span class="OutText">年级：</span>
+                    <input type="text" alt="Name" id="Grade" value="2018级" readonly="readonly">
+                </div>
+                <div class="BornOut">
+                    <span class="OutText">专业班级：</span>
+                    <input type="text" alt="Name" id="MajorClass" value="">
+                </div>
+                <div class="BornOut" >
+                    <span class="OutText">出生年月：</span>
+                    <input type="text" alt="Name" id="Born" value="例：1990.11.13">
+                </div>
+                <div class="BornOut" >
+                    <span class="OutText">兴趣爱好:</span>
+                    <input type="text" alt="Name" id="Interest" value="" maxlength="11">
+                </div>
+                <div class="BornOut" >
+                    <span class="OutText">联系方式:</span>
+                    <input type="text" alt="Name" id="PhoneNumber" value="手机号码" maxlength="11">
+                </div>
+               <button id="next">NEXT</button>
+            </div>
+        </div>
+        <div id="PageTwo">
+            <div class="ChooseOut">
+                <img src="../img/web__jiantou_xia.png" alt="ChooseDown" id="Down">
+                <img src="../img/web__jiantou_shang.png" alt="ChooseUp" id="Up">
+                <input type="text" alt="ChooseDirection" id="ChooseDirection" readonly="readonly" value="技术意向" >
+                <img src="../img/message_bg_choose_2.png" alt="bg2" id="KindsBg">
+                <ul id="ChooseKinds">
+                    <li>Web前端</li>
+                    <li>Web后端</li>
+                    <li>iOS端</li>
+                    <li>软件测试</li>
+                </ul>
+            </div>
+            <div class="writerOut">
+                <div class="IntroductionOut">
+                    <p id="textOut">个人介绍及技能</p>
+                    <span id="NumberLimit">0</span>
+                    <span class="LimitText">/450</span>
+                    <textarea id="Introduction" maxlength="450"placeholder="请介绍您的个人简历和特长"></textarea>
+                </div>
+                <div class="IntroductionOut">
+                    <p id="SkillText">项目及校园经历</p>
+                    <span id="SkillLimit">0</span>
+                    <span class="LimitText">/450</span>
+                    <textarea id="Skill" maxlength="450" placeholder="请描述您的项目和校园经历"></textarea>
+               </div>
+               <div class="IntroductionOut">
+                    <p id="PlanText">未来规划</p>
+                   <span id="PlanLimit">0</span>
+                   <span class="LimitText">/450</span>
+                    <textarea id="Plan" maxlength="450" placeholder="请谈谈您的未来规划"></textarea>
+                </div>
+            </div>
+            <button id="returnPage">返回</button>
+            <button id="submit">提交</button>
+        </div>
+        <div id="SuccessOut">
+            <img src="../img/bg_3.png" alt="success" id="success">
+            <p class="SuccessPrompt">
+                <span class="succeOne">你的报名表我们已经收到了</span>
+                <span class="succeTwo">具体面试安排，请留意短信通知哦！</span>
+            </p>
+        </div>
+    </div>
+    <div id="verification_shade">
+        <div class="verification_main">
+            <h3>请输入下图的答案</h3>
+            <div class="verification">
+                <img src="" alt="verificationImg" id="verificationImg">
+                <img src="../img/pc_Btn_refresh.png" id="refresh" alt="refreshImg">
+            </div>
+            <input type="text" id="verificationResult" alt="result" value="">
+            <button id="resultButtom">确定</button>
+        </div>
+    </div>
+    <script type="text/javascript" src="../js/jquery-1.8.0.min.js"></script>
+    <script type="text/javascript" src="../js/small-exif.js"></script>
+    <script type="text/javascript" src="../js/ajaxfileupload.js"></script>
+    <script type="text/javascript" src="../js/SignUpPC.js"></script>
+</body>
+</html>

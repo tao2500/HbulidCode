@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>弹窗测试</title>
+	</head>
+	<body>
+		<h1>这是index页面</h1>
+		<a href="http://www.baidu.com" target="_blank">点击创建一个新窗口</a>
+		<button onclick="nex()">点击跳出弹窗</button>
+	</body>
+	<script>
+		window.onload=nex();
+		function nex(){
+//			alert("1");
+			window.open("http://www.baidu.com","nex1","width=400px,height=400px,top=50px,resizable=no,toolbar=no");
+//			alert("2");
+		} 
+	</script>
+</html>

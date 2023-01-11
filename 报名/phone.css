@@ -1,0 +1,123 @@
+html,body,div,ul,li,span,img,a,button,input,select,table,td,tr,th,p,h1,h2,h3,h4,h5,h6,header,section,figure {
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-family: "微软雅黑";
+}
+
+ol,
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+input,
+button,
+a {
+    outline: 0;
+    border: 0;
+}
+
+.clear {
+    clear: both;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    text-decoration: none;
+    font-weight: normal;
+    font-size: 100%;
+}
+
+.clearfix:before,
+.clearfix:after {  /*清楚浮动*/
+    content: "";
+    display: table;
+}
+
+.clearfix:after{
+    clear: both;
+}
+
+.clearfix{
+    *zoom: 1;/*IE/7/6*/
+}
+@media only screen and (max-width: 321px) {
+    html {
+        font-size: 80%!important;/*12.8px*/
+    }
+}
+
+@media only screen and (max-width: 322px) and (max-width: 341px) {
+    html {
+        font-size: 90%!important;/*14.4px*/
+    }
+}
+
+@media only screen and (min-width: 342px) and (max-width: 380px) {
+    html {
+        font-size: 100%!important;/*16px*/
+    }
+}
+
+@media only screen and (min-width: 381px) and (max-width: 420px) {
+    html {
+        font-size: 110%!important;/*17.6px*/
+    }
+}
+
+@media only screen and (min-width: 421px) and (max-width: 460px) {
+    html {
+        font-size: 130%!important;/*20.8px*/
+    }
+}
+
+@media only screen and (min-width: 461px) and (max-width: 500px) {
+    html {
+        font-size: 140%!important;/*22.4px*/
+    }
+}
+
+@media only screen and (min-width: 501px) and (max-width: 540px) {
+    html {
+        font-size: 150%!important;/*24px*/
+    }
+}
+
+@media only screen and (min-width: 541px) and (max-width: 580px) {
+    html {
+        font-size: 160%!important;/*25.6px*/
+    }
+}
+
+@media only screen and (min-width: 581px) and (max-width: 620px) {
+    html {
+        font-size: 170%!important;/*27.2px*/
+    }
+}
+
+@media only screen and (min-width: 621px) and (max-width: 660px) {
+    html {
+        font-size: 180%!important;/*28.8px*/
+    }
+}
+
+@media only screen and (min-width: 661px) and (max-width: 700px) {
+    html {
+        font-size: 190%!important;/*30.4px*/
+    }
+}
+
+@media only screen and (min-width: 701px) {
+    html {
+        font-size: 200%!important;/*32px*/
+    }
+}

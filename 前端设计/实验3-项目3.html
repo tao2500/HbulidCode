@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>动态添加、删除下拉菜单选项</title>
+	</head>
+	<body>
+		<h3>JavaScript 控制表单 - 动态添加、删除下拉菜单选项</h3>
+		<hr />
+		<br />
+		<fieldset>
+			<legend>添加选项</legend>
+			Value：<input class="input" type="text" />
+			<p>Text：<input class="inputt" type="text" /></p>
+			<input type="submit" value="添加选项" onclick="apiAdd()" />
+		</fieldset>
+		Hobby:<select>
+			<option>请选择...</option>
+			<option>Sport</option>
+			<option>Reading</option>
+			<option>Tour</option>
+		</select>
+		<input type="reset" value="删除选项" onclick="removee()"/>
+		
+		<script>
+			function apiAdd(){
+				var valu = document.getElementsByClassName("input")[0];
+				var textt = document.getElementsByClassName("inputt")[0];
+				var sele = document.getElementsByTagName("select")[0];
+				var newnode = document.createElement("option");
+				newnode.text = textt.value; 
+				sele.appendChild(newnode);
+				valu.value = "";
+				textt.value = "";
+			}
+			function removee(){
+				var sele = document.getElementsByTagName("select")[0];
+				sele.remove(sele.selectedIndex);
+			}
+		</script>
+	</body>
+</html>

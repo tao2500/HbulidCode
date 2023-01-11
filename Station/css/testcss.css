@@ -1,0 +1,70 @@
+/*@import url("test2css.css");引用另一个css文档。*/
+.back{
+	background-image: url(../img/background.jpg);
+	background-repeat: no-repeat;
+	opacity: 0.9;
+	background-position: left top;
+}
+
+.t1 {
+	font-family: "宋体";
+	font-size: 60px;
+	color: coral;
+}
+.t2 {
+	font-family: "宋体";
+	font-size: 40px;
+	color: blueviolet;
+}
+.t3 {
+	font-family: "宋体";
+	font-size: 20px;
+	color:burlywood;
+}
+.t4 {
+	font-family: "宋体";
+	font-size: 10px;
+	color:cadetblue;
+}
+
+.sp{
+	position: relative;
+	display: ;
+	top: -30px;
+}
+
+.shuli{
+	font-style: italic;
+	font-size: 5px;
+	-webkit-writing-mode: vertical-rl;
+	position: absolute;
+	top: 100px;
+	left: 350px;
+	 }
+.kuang {
+	width: 350px;
+	height: 300px;
+}
+.biao{
+	font-style: italic;
+	font-size: 5px;
+	
+}
+
+.y4{
+	float: right;
+	position:absolute;
+	top: 20px;
+	left: 470px;
+}
+#wu1{
+	border-left-style: none;
+}
+
+#wu2{
+	border-right-style: none;
+}
+
+/*html * {
+    outline: 1px solid red
+}*/

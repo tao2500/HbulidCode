@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>认证页面</title>
+		<style>
+			#head{
+				background-color: #0000FF;
+				color: azure;
+				text-align: center;
+				margin: 0 100px;
+			}
+			.headp{
+				font-size: large;
+			}
+			img{
+				float: left;
+				margin: 0 0 0 100px;
+			}
+			.bott{
+				text-align: center;
+				margin: 20px;
+			}
+			.content{
+				color: blueviolet;
+				
+				border-style: solid;
+				padding: 50px 1px;
+			}
+			.contactwarning,.idwarning,.twowordwarning,.wordwarning{
+				color:red;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="head">
+			<p class="headp">校园办公系统认证页面</p>
+		</div>
+		<div class="content">
+			<img src="img/sfyz.jpg" />
+			<!--<input class="id" type="text"/>-->
+			校园卡号：<input class="id" type="text" /><span class="idwarning"> </span>
+			<br />
+			口&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;令&nbsp;：<input class="word" type="text" /><span class="wordwarning"> </span>
+			<br />
+			二次口令：<input class="twoword" type="text" /><span class="twowordwarning"> </span>
+			<br />
+			QQ&nbsp;/微信：<input class="contact" type="text" /><span class="contactwarning"> </span>
+			<div class="bott">
+				<input type="submit" value="提交" onclick="submit()" />
+				<input type="reset" value="重置" onclick="reset()"/>
+			</div>
+			
+		</div>
+	</body>
+	
+	<script>
+		var id = document.getElementsByClassName("id")[0];
+		var idwarning = document.getElementsByClassName("idwarning")[0];
+		var word = document.getElementsByClassName("word")[0];
+		var wordwarning = document.getElementsByClassName("wordwarning")[0];
+		var twoword = document.getElementsByClassName("twoword")[0];
+		var twowordwarning = document.getElementsByClassName("twowordwarning")[0];
+		var contact = document.getElementsByClassName("contact")[0];
+		var contactwarning = document.getElementsByClassName("contactwarning")[0];
+		var word = document.getElementsByClassName("word")[0];
+		var wordwarning = document.getElementsByClassName("wordwarning")[0];
+		var twoword = document.getElementsByClassName("twoword")[0];
+		var twowordwarning = document.getElementsByClassName("twowordwarning")[0];
+		var contact = document.getElementsByClassName("contact")[0];
+		var contactwarning = document.getElementsByClassName("contactwarning")[0];
+		var authenticationNum = 5;
+		function submit(){
+			var rex = /[a-zA-Z]/g ;
+            var Booleann = rex.test(id.value);
+            if(Booleann != true){
+            	var elementt = document.createElement("span");
+				var warning = document.createTextNode("卡号不全为数字!");
+				elementt.appendChild(warning);
+				idwarning.appendChild(elementt);
+				authenticationNum-=1;
+            }
+			if(id.value.length!=10){
+				var elementt = document.createElement("span");
+				var warning = document.createTextNode("卡号长度必须为10！");
+				elementt.appendChild(warning);
+				idwarning.appendChild(elementt);
+				authenticationNum-=1;
+            }
+			if(word.value.length>15||word.value.length<8){
+				var elementt = document.createElement("span");
+				var warning = document.createTextNode("口令长度不能小于8或大于15");
+				elementt.appendChild(warning);
+				wordwarning.appendChild(elementt);
+				authenticationNum-=1;
+            }
+			if(word.value.length != twoword.value.length){
+				var elementt = document.createElement("span");
+				var warning = document.createTextNode("口令与二次口令不相同！");
+				elementt.appendChild(warning);
+				twowordwarning.appendChild(elementt);
+				authenticationNum-=1;
+            }
+			if(contact.value.length == 0){
+				var elementt = document.createElement("span");
+				var warning = document.createTextNode("微信号不能为空！");
+				elementt.appendChild(warning);
+				contactwarning.appendChild(elementt);
+				authenticationNum-=1;
+        	}
+			if(authenticationNum == 5){
+				alert("认证成功！");
+			}
+		}
+		function reset(){
+			id.value="";
+			word.value="";
+			twoword.value="";
+			contact.value="";
+		}
+	</script>
+</html>

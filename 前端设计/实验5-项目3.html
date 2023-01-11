@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>按钮注册</title>
+	</head>
+	<style>
+        #license {
+            width: 250px;
+            height: 250px;
+            border: 2px solid black;
+            margin: 50px auto 0px;
+            overflow: auto;
+            text-indent: 2em;
+        }
+
+        #license>p {
+            margin: 0;
+        }
+
+        #license{
+            text-align: center;
+        }
+
+        #bottom {
+            width: 80px;
+            height: 50px;
+            margin: 10px auto 0;
+        }
+    </style>
+</head>
+<body>
+<div id="license">
+    <p>****软件许可及服务协议</p>
+    <p>
+    	本服务协议双方为本网站与本网站用户，本服务协议具有合同效力。您确认本服务协议后，本服务协议即在您和本网站之间产生法律效力。请您务必在注册之前认真阅读全部服务协议内容，如有任何疑问，可向本网站咨询。
+
+      无论您事实上是否在注册之前认真阅读了本服务协议，只要您点击协议正本下方的"注册"按钮并按照本网站注册程序成功注册为用户，或者第一次成功登陆本网站后，您的行为仍然表示您同意并签署了本服务协议。
+    </p>
+</div>
+    
+<div id="bottom">
+    <button type="button" id="button" disabled="true">用户注册</button>
+</div>
+
+</body>
+
+<script type="text/javascript">
+    var license = document.getElementById("license");
+    var button = document.getElementById("button");
+
+    license.onscroll = function() {
+        if (license.scrollHeight - license.scrollTop <= license.clientHeight) {
+            button.disabled = false;
+            button.onclick = function() {
+                 alert("注册成功！");
+            }
+        }
+    }
+</script>
+</html>

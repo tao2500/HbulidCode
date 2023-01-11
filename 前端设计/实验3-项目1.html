@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>4种鼠标事件</title>
+		<style>
+			.content{
+				text-align: center;
+				background-color: darkkhaki;
+			}
+			
+		</style>
+	</head>
+	<body>
+		<div class="content">
+			<h1>鼠标动作捕获与响应</h1>
+			<br />
+			<input class="input" type="text" onmouseover="MouseOver()" onmouseout="MouseOut()" onclick="Click()" ondblclick="Dblclick()"/>
+			<br />
+			<br />
+			<img  src="" class="img" alt="图片位" />
+		</div>
+		
+		<script>
+			window.onload=MouseOut();
+//			function get(class){
+//				return document.getElementsByClassName(class)[0];
+//			}
+			function MouseOver(){
+				var content = document.getElementsByClassName("content")[0];
+				var inpu = document.getElementsByClassName("input")[0];
+				var img = document.getElementsByClassName("img")[0];
+				content.style.backgroundColor = "coral";
+				img.src = "img/实验3/image22.jpg";
+			}
+			function MouseOut(){
+				var content = document.getElementsByClassName("content")[0];
+				var inpu = document.getElementsByClassName("input")[0];
+				var img = document.getElementsByClassName("img")[0];
+				content.style.backgroundColor = "darkkhaki";
+				img.src = "img/实验3/image21.jpg";
+			}
+			function Click(){
+				var content = document.getElementsByClassName("content")[0];
+				var inpu = document.getElementsByClassName("input")[0];
+				var img = document.getElementsByClassName("img")[0];
+				content.style.backgroundColor = "coral";
+				img.src = "img/实验3/image23.jpg";
+			}
+			function Dblclick(){
+				var content = document.getElementsByClassName("content")[0];
+				var inpu = document.getElementsByClassName("input")[0];
+				var img = document.getElementsByClassName("img")[0];
+				content.style.backgroundColor = "cornflowerblue";
+				img.src = "img/实验3/image24.jpg";
+			}
+		</script>
+	</body>
+	
+	
+</html>

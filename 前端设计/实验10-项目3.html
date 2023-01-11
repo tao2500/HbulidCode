@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>第五章样式绑定整合</title>
+		<script src="js/vue.js"></script>
+		<style>
+			.static{
+				color: #000000;
+				font-size: 22px;
+			}
+			.colorone{
+				color: red;
+			}
+			.colortwo{
+				color: blueviolet;
+			}
+			.colorthree{
+				color: greenyellow;
+			}
+			.colorfour{
+				color: #008000;
+			}
+			.fontsizeone{
+				font-size: 30px;
+			}
+			.fontsizetwo{
+				font-size: 10px;
+			}
+			.fontsizethree{
+				font-size: 22px;
+			}
+			
+		</style>
+	</head>
+	<body>
+		<div id="content">
+			<span class="colorone static">普通变量：vue前景应用广阔</span><br />
+			<span v-bind:class="{colorfour : boolean1 ,'fontsizeone' : boolean2}">对象：vue前景应用广阔</span><br />
+			<span v-bind:class="{colortwo : boolean1 ,'fontsizetwo' : boolean2}">对象：vue前景应用广阔</span><br />
+			<span v-bind:class="['colorfour','fontsizeone']">数组：vue非常好学</span><br />
+			<span class="fontsizethree" v-bind:class="['colorfour']">v-bind：class指令与普通的class属性共存</span><br />
+			<span v-bind:style="{fontSize:'30px',color:'yellow'}">绑定style</span><br />
+			<span v-bind:style="{fontSize:'30px'}">style对象</span><br />
+			<span v-bind:style="[style1]">style数组</span>
+		</div>
+	</body>
+	<script>
+		new Vue({
+			el:"#content",
+			data:{
+				boolean1 : true,
+				boolean2 : true,
+				style1:{
+					fontSize: '30px',
+					color:'blue'
+				}
+			}
+		})
+	</script>
+</html>

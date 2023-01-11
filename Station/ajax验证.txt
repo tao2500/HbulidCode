@@ -1,0 +1,16 @@
+<div class="verification" style="position: relative;top: 50vh;right: -42.5vh;width: 350px;height: 350px;background-color:  white;border: 1px,solid,black;border-radius: 10px;"> 
+			<table>
+				<p style="position: relative; top: 10px; left: 93px; font-size: 25px; ">请输入验证码 </p>
+				<input type="text" id="input" value=""; />
+				<br />
+				<br />
+				<input type="text" value="" id="output" readonly="readonly""/>
+				<input type="submit" value="获取验证码" onclick="setOutput()" class="submit" style="position: relative; top:4vh; left:1vh"/>
+				<br />
+				<p  id="result"></p>
+				<br />
+				<br />
+				<br />
+				<input type="submit" value="确定" onclick="getInput();setOutput()" class="submit"  />  
+			</table>
+		</div>

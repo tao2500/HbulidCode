@@ -1,0 +1,29 @@
+@charset "utf-8";
+/* CSS Document */
+.title {
+	font-family: Cambria, "Hoefler Text", "Liberation Serif", Times, "Times New Roman", serif;
+	font-size: 30px;
+	font-style: italic;
+	color: #D64CEE;
+	background-color: #FBFBFB;
+	float: left;
+	
+}
+.logo{
+	float: left;
+}
+.daohang{
+	float: left;
+	
+}
+.ul {
+	list-style-type: none;
+	position: relative;
+	left: 180px;
+	top: 50px;
+}
+.li {
+	display: block;
+	padding: 5 px;
+	text-decoration: none;
+}

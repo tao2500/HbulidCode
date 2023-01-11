@@ -1,0 +1,96 @@
+body{
+	background-image: url(../img/bg.png);
+	background-size: cover;
+	background-repeat: no-repeat;
+	z-index: 1;
+	
+	
+} 
+
+.area{
+	height: 850px;
+	position: absolute;
+	top: 150px;
+	left: 750px;
+}
+.photo{
+	width: 250px;
+	position: absolute;
+	clear: all;
+	top: 200px;
+	left: 950px;
+	color: #D64CEE;
+	
+}
+.input{
+	border: none;
+	background-color: #FEFBE6;
+	background-image: url(../img/message_bg.png);
+	width: 356px;
+	height: 128px;
+}
+
+#drop_down_menu{
+	color: #FF0000;
+	border: none;
+	background-image: url(../img/message_bg_choose_1.png);
+	background-color: #FEFBE6;
+	width: 177px;
+	height: 38px;
+}
+#menu{
+	clear: all;
+	background-image: url(../img/message_bg_choose_2.png);
+	background-clip: initial;
+	width: 182px;
+	height: 173px;
+	z-index: 2;
+	position: absolute;
+	top: 315px;
+	right: 1058px;
+	text-align: center;
+}
+object{
+	height: 30px;
+	width: 182px;
+}
+#menu p{
+	display: inline;
+	white-space:nowrap;
+}
+#menu p:hover{
+	background-image: url(../img/message_bg_choose_pre.png);
+}
+
+.footer{
+	position: absolute;
+	bottom: 10px;
+	left: 900px;
+}
+.next{
+	font-size: 30px;
+	
+	position: absolute;
+	top: 270px;
+	right: 880px;
+}
+
+
+.submit{
+	border: none;
+	width: 163px;
+	height: 40px;
+	font-family: "微软雅黑";
+	color: #FBFBFB;
+	background-image: url(../img/button_bg.png);
+	background-color: #FEFBE6;
+	
+}
+
+/*html * {
+    outline: 1px solid red
+}*/
+
+
+
+

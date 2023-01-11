@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Interview</title>
+		<link rel="stylesheet" href="../css/testcss.css" type="text/css" />
+	</head>
+	<body class="back" >
+		<div>
+			<font class="t1">日</font>
+			<font class="t2">程</font>
+			<font class="t3">规</font>
+			<font class="t4">划</font>
+		</div>
+		
+		<div >
+			<fieldset class="kuang" >
+				<legend>心有所负，不失其重!</legend>
+				<h2>Monday ^_^</h2>
+				<input type="checkbox" checked>背英语单词<br />
+				<input type="checkbox" checked>学习web前端<br />
+				<input type="checkbox"><s>预习高数</s><br />
+				<input type="checkbox"><s>练习800米跑步</s><br />
+				<input type="checkbox" checked>追剧<br />
+				<span class="sp">Review:</span>   
+				<textarea rows="4"></textarea>
+				<p>Feeling: <input type="radio" name="nice"> nice
+				<input type="radio" name="soso"> soso
+				<input type="radio" name="bad"> bad </p>
+			</fieldset>
+		</div>
+		
+		<span class="shuli">好 好 学 习</span>
+		
+		<div class="y4">
+			<table border="1px" cellspacing="0px" frame="hsides"><!--表格间距0 -->
+				<tr>
+					<td id="wu1">data</td>
+					<td id="wu2">weather</td>
+				</tr>
+				<tr>
+					<td id="wu1">2021-5-31</td>
+					<td class="biao" align="center" id="wu2"> 晴</td>
+				</tr>
+			</table>
+		</div>
+	</body>
+</html>

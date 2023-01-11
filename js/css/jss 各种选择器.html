@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>创建css选择器</title>
+		<style type="text/css">
+			p {
+				font-size: 40px;
+				color: #345cff;                                <!--根据p元素类型选择元素-->
+			}
+		</style>
+		
+		
+		* {
+				font-size: 40px;
+				color: #345cff;                                <!--所有元素类型选择元素-->
+			}
+		</style>
+		
+		
+		.class1 {
+				font-size: 40px;
+				color: #345cff;                                <!--用类属性 选择元素 .后为类属性 -->
+			}
+		</style>
+		
+		# id1 {
+				font-size: 40px;
+				color: #345cff;                                <!--用id选择元素-->
+			}
+		</style>
+		
+		 [href]{
+				font-size: 80px;
+				color: #ffad2a;                                <!--根据属性选择元素-->
+			}
+		</style>
+		
+		a {
+				font-size: 40px;
+				color: #345cff;                                
+			}
+			a：hover {
+				font-size: 40px;                             <!--冒号选择器选择元素 鼠标滑到该处时显示-->
+				color: #345cff;
+			}
+		</style>
+	</head>
+	<body>
+		<a class="class1">靠谱学院</a>      <!--class是一个全局属性  class值随便写一个英文为类属性值 可多次使用-->
+		<a href="js变量使用.html"靠谱学院</a>              <!--属性选择器-->
+		<p id="id1">靠谱学院</p>            
+                                        <!--id具有唯一性不能重复使用（不推荐 任可使用 ）-->
+		<h1>靠谱学院</h1>
+	</body>
+</html>

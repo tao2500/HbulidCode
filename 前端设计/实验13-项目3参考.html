@@ -1,0 +1,78 @@
+<!-- vue-5-9.html -->
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>任意组件间传值</title>
+		<script type="text/javascript" src="js/vue.js"></script>
+		<style type="text/css">
+			.comp {
+				width: 300px;height: 200px;
+				border: 1px dotted black;border-radius: 10px;
+				padding: 10px;text-align: center;display: inline-block;
+			}
+			button {
+				border-radius: 10px;
+				border: 1px dotted green;background-color: #EFEFEF;
+				color: #111111;width: 130;height: 35px;
+			}px
+		</style>
+	</head>
+	<body>
+		<div id="app">
+			<p>兄弟组件之间任意通信BUS</p>
+			<my-comp1></my-comp1>
+			<my-comp2></my-comp2>
+		</div>
+		<script type="text/javascript">
+			var bus = new Vue(); //定义事件总线
+			const Comp1 = {
+				data() {
+					return {
+						comp1Message: '这是组件1的初始信息！,
+					}
+				},
+				template: '<div class="comp"><h3>我是组件1</h3><button @click="changeMessage">发送消息给组件2</button><h3>{{comp1Message}}</h3></div>',
+				methods: {
+					changeMessage() {
+						//利用中介bus传播事件
+						bus.$emit('updateComp1', '组件1说：今天不上班！');
+					}
+				},
+				created() {
+				//_this = this //这一步赋值必须有
+				bus.$on('updateComp2',(data)=> { //利用中介bus接收事件
+						this.comp1Message = data;
+					})
+				}
+			}
+			const Comp2 = {
+				data() {
+					return {
+						comp2Message: '这是组件2的初始信息！'
+					}
+				},
+				template: '<div class="comp"><h3>我是组件2</h3><button @click="changeMessage">发送消息给组件1</button><h3>{{comp2Message}}</h3></div>',
+				methods: {
+					changeMessage() {
+						//利用中介bus传播事件
+						bus.$emit('updateComp2', '组件2说:今天我们一起去玩吧！');
+					}
+				},
+				created() {
+					//_this = this; //这一步赋值必须有
+					bus.$on('updateComp1', (data)=> { //利用中介bus接收事件
+						this.comp2Message = data;						
+					})
+				}
+			}
+			var myViewModel = new Vue({
+				el: '#app',				
+				components: {
+					'my-comp1': Comp1,
+					'my-comp2': Comp2,
+				}
+			})
+			</script>
+	</body>
+</html>

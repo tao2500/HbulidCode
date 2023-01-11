@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>组件技术输出影片信息</title>
+		<script src="js/vue.js"></script>
+	</head>
+	<body>
+		<!--<img src="img/实验13/girl.jpg" />-->
+		<div id="content">	
+			<show v-bind:mov="mov"></show>
+		</div>
+	</body>
+	<script>
+		
+		new Vue({
+			el:'#content',
+			data:{
+				mov:{
+					url:'img/实验13/girl.jpg',
+					tit:'我是传奇',
+					text:'末世科幻动作电影'
+				}
+			},
+			components:{
+				'show':{
+					template:'<div><img :src=mov.url /><h3>{{mov.tit}}</h3><h4>{{mov.text}}</h4></div>',
+					props:['mov'],
+//					data:function(){
+//						return{
+//							cont : this.mov
+//						}
+//					}
+				}
+			}
+		})
+	</script>
+</html>

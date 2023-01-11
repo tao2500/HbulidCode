@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>key管理可复用的元素p45</title>
+		<script src="js/vue.js">
+			Vue.config.productionTip = false;
+		</script>
+	</head>
+	<body>
+		<h1>1.Vue复用已有元素</h1>
+		<div id="appone">
+			<template v-if="logtype === 'username'">
+				<label>邮箱：</label>
+				<input placeholder="输入您的邮箱" />
+			</template>
+			<template v-if="logtype === 'useremail'">
+				<label>用户名称：</label>
+				<input placeholder="输入您的用户名称" />
+			</template>
+			<button @click="change()">切换登录方式（无key）</button>
+		</div>
+		<h1>2.Vue使用key管理复用元素</h1>
+		<div id="apptwo">
+			<template v-if="logtype === 'username'">
+				<label>邮箱：</label>
+				<input placeholder="输入您的邮箱" key="email"/>
+			</template>
+			<template v-if="logtype === 'useremail'">
+				<label>用户名称：</label>
+				<input placeholder="输入您的用户名称" key="name" />
+			</template>
+			<button @click="change()">切换登录方式（有key）</button>
+		</div>
+	</body>
+	<script>
+		new Vue({
+			el:"#appone",
+			data:{
+				logtype:'username'
+			},
+			methods:{
+				change:function(){
+					this.logtype = this.logtype === 'username'? 'useremail' : 'username'
+				}
+			}
+		})
+		new Vue({
+			el:"#apptwo",
+			data:{
+				logtype:'username'
+			},
+			methods:{
+				change:function(){
+					this.logtype = this.logtype === 'username'? 'useremail' : 'username'
+				}
+			}
+		})
+	</script>
+</html>

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>onchange事件</title>
+		<style>
+			
+		</style>
+		<script src="js/vue.js"></script>
+	</head>
+	<body>
+		<div id="content">
+			<h1>添加商品信息</h1>
+			<span>所属类别：
+				<select v-on:change="setptext">
+					<option v-for="pmenu in menulist" v-bind:value="pmenu.text">{{pmenu.text}}</option>
+				</select>
+				<select>
+					<option  v-for="submenu in getsubment" v-bind:value="submenu.text">{{submenu.text}}</option>
+				</select>
+			</span>
+			<br />
+			<span>商品名称：<input type="text" /></span><br />
+			<span>会员价：<input type="text" /></span><br />
+			<span>商品数量：<input type="text" /></span><br />
+			<input type="submit" value="添加" />
+			<input type="reset" value="重置" />
+			
+			<!--<div>{{tss}}</div>-->
+		</div>
+	</body>
+	<script>
+		new Vue({
+			el:"#content",
+			data:{
+				ptext:'数码设备',
+//				tss:'no',
+				menulist:[
+					{
+						text:'数码设备',
+						submenu:[
+				        {text:'数码相机'},
+				        {text:'打印机'},
+				        {text:"复印机"},
+				    ]},
+					{
+						text:'家用电器',
+						submenu:[
+				        {text:'电视机'},
+				        {text:'电冰箱'},
+				        {text:"洗衣机"},]
+					},
+					{
+				        text:'礼品工艺',
+				        submenu:[
+				            {text:'鲜花'},
+				            {text:'彩带'},
+				            {text:"音乐盒"},
+				        ]
+				    }
+				]
+			},
+			methods:{
+				setptext : function(event){
+					this.ptext = event.target.value;
+				}
+			},
+			computed : {
+				getsubment : function(){
+					for (var i = 0;i < this.menulist[2].submenu.length;i++) {
+						if(this.menulist[i].text == this.ptext){
+//							this.tss = 'ok2';
+							return this.menulist[i].submenu;
+						}
+					}
+				}
+			}
+		})
+	</script>
+</html>

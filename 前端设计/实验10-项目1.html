@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>样式属性绑定</title>
+		<script src="js/vue.js"></script>
+		<style>
+			.colo{
+				color: green;
+				font-size: 50px;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="content">
+			<div>
+				<div  v-bind:class="['colo']" ><img src="img/实验十/javascript.png" /> 零基础学javascript
+				<hr /></div>
+				<div><img src="img/实验十/htmlcss.png" /> 零基础学HTML5+CSS3
+				<hr /></div>
+				<div><img src="img/实验十/javascript200.png" /> javascript精彩编程200例
+				<hr /></div>
+				<div v-bind:class="[classname]"><img src="img/实验十/htmlcss200.png" /> HTML5+CSS3精彩编程200例</div>
+			</div>
+		</div>
+	</body>
+	<script>
+		new Vue({
+			el:".content",
+			data:{
+				classname : 'colo'
+			}
+		})
+	</script>
+</html>

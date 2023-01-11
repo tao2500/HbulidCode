@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>创建文本过度</title>
+		<style type="text/css">
+			p {
+				width:100px;
+				height: 100px;
+				background-color: antiquewhite;        <!--创建该颜色方块-->
+			}
+			p:hover{
+				width: 200px;
+				height: 200px;
+				background-color: #ffad2a;             <!--点击此处直接过度-->
+				transition-delay: 1s;                  <!--点击此处延缓1s过度-->
+				transition-duration: 500ms;            <!--点击此处延缓1s 过度时间500ms过度-->
+				-webkit-transition-duration: ;         <!--添加此代码可让老浏览器正常运行-->
+				-o-transition-duration: ;               <!--让欧朋浏览器正常运行-->
+				-moz-transition-duration: ;               <!--让火狐浏览器正常运行-->
+				-ms-transition-duration: ;               <!--让微软ie浏览器正常运行--> 
+				transition-property: background-color ; <!--长宽瞬间变化而颜色缓慢变化-->
+				transition-property: height ;            <!--宽度瞬间变化而长度缓慢变化-->
+			}
+			
+		</style>
+	</head>
+	<body>
+	</body>
+</html>

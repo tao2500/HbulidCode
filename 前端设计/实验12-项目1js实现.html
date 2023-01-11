@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		
+		var bt1 = document.getElementsByClassName("botton1")[0];
+		var bt2 = document.getElementsByClassName("botton2")[0];
+		var bt3 = document.getElementsByClassName("botton3")[0];
+		var app = document.getElementById("app");
+		function Selectall(){
+			var i=0;
+			var ts = bt1.checked;//全选框状态
+			alert(ts+"、"+app);
+			if(ts==false){
+				for(i;i<array.length;i++){
+					array[i].checked = judge(0);
+				}
+				i=0;
+				number=0;
+				switc();
+			}else if(ts==true){
+				number=10;
+				for(i;i<array.length;i++){
+					array[i].checked = judge(1);
+				}
+				i=0;
+				switc();
+			}
+			
+		}
+		bt1.addEventListener("click",Selectall(),false);
+	</body>
+</html>
+
+
+
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>绑定复选框数据</title>
+		<script src="js/vue.js"></script>
+	</head>
+	<body>
+		<div id="app">
+			<input type="checkbox" id="app1" value="上网" v-model="checks" />
+			<label for="app1">上网</label>
+			<input type="checkbox" id="app2" value="旅游" v-model="checks" />
+			<label for="app2">旅游</label>
+			<input type="checkbox" id="app3" value="看书" v-model="checks" />
+			<label for="app3">看书</label>
+			<input type="checkbox" id="app4" value="电影" v-model="checks" />
+			<label for="app4">电影</label>
+			<input type="checkbox" id="app5" value="游戏" v-model="checks" />
+			<label for="app5">游戏</label>
+			<p><span>您的兴趣爱好：{{checks}}</span></p>
+		</div>
+			<br />
+			<input class="botton1" type="button" value="全选" @click="seleall"/>
+			<input class="botton2" type="button" value="反选" />
+			<input class="botton3" type="button" value="全不选" />
+	</body>
+	<script>
+		new Vue({
+			el:"#app",
+			data:{
+				checks: [],
+			},
+			methods:{
+				seleall: function(){
+					
+				}
+			}
+		});
+		
+	</script>
+</html>

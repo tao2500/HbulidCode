@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			.test1{
+				background-color: #AAAAAA;
+				/*	 textalign对块级元素无效*/
+				display: block;
+				float: left;
+				text-align: center;
+			}
+			p{
+				clear: both;
+				text-indent: 2px;//首行缩进
+			}
+			.divv{
+				background-color: #CCCC56;
+				/*padding: 20px;*/
+				border: 10px solid #FF0000;  /*注意:可视化尺寸及padding盒子*/
+				margin: 20px;  /*当元素"充分可利用空间时，margin才能影响元素可视尺寸"*/
+				padding: 10px;
+			}
+			.spann{
+				background-color: #4CAF50;
+				border: 10px solid #FF0000;
+				padding: 20px; /* 元素设置了宽或有包裹性时,padding会影响元素可视尺寸*/
+				margin: 20px;
+			}
+			.a{
+				background-color: #ADFF2F;
+			}
+			.farder1{
+				width: 100px;
+				height: 100px;
+				background-color: blue;
+				padding: 10px;
+			}
+			.son1{
+				width: 50px;
+				height: 50px;
+				background-color: burlywood;
+			}
+			.farder2{
+				width: 100px;
+				height: 100px;
+				background-color: blue;
+			}
+			.son2{
+				width: 50px;
+				height: 50px;
+				background-color: burlywood;
+				margin: 20px;
+			}
+			.farder3{
+				width: 100px;
+				height: 100px;
+				background-color: blue;
+			}
+			.son3{
+				background-color: burlywood;
+				margin: 10px;
+			}
+			.farder4{
+				width: 100px;
+				height: 100px;
+				background-color: blue;
+			}
+			.son4{
+				display: inline;
+				background-color: burlywood;
+				padding: 20px
+				}
+		</style>
+	</head>
+	<body>
+		<div class="test1">
+			<p>这是一个块级元素</p>
+		</div>
+		<p>这是一个实验文本</p>
+		<div class="divv">
+			<p>块级元素能padding吗</p>
+		</div>
+		<span class="spann">
+			内联级元素能margin吗
+		</span>
+		<div class="a">
+			<p>这是一个块级元素</p>
+		</div>
+		<div class="farder1">
+			<div class="son1">son</div>
+		</div>
+		<hr />
+		<div class="farder2">
+			<div class="son2">son</div>
+		</div>
+		<hr />
+		<div class="farder3">
+			<div class="son3">son</div>
+		</div>
+		<hr />
+		<div class="farder4">
+			<div class="son4">son</div>
+		</div>
+	</body>
+</html>

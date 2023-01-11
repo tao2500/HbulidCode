@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="js/vue.js">
+			Vue.config.productionTip = false;
+		</script>
+	</head>
+	<body>
+		<div id="lli">
+			<ol>
+			<li>文本插值：我的姓名是{{name}}</li>
+			<li>数值表达式绑定：{{two}}</li>
+			<li>函数表达式绑定：若x={{threeone}}则x²+5={{threetwo}}</li>
+			<li>条件表达式绑定：若yesno值为{{four}}，则我的选项是确定。</li>
+			<li>使用v-text指令：<p v-text="five"></p></li> 
+			<li>使用v-html指令：<p v-html="five"></p></li>
+		</ol>
+		</div>
+		
+	</body>
+	<script>
+		
+		new Vue({
+			el:'#lli',
+			data:{
+				name:"王宝强",
+				two:'5+5*3=20',
+				threeone:'10',
+				threetwo:'105',
+				four:'true',
+				five:'<b>这些信息是使用b标记的显示效果</b>'
+			}
+		})
+	</script>
+</html>

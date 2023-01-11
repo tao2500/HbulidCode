@@ -1,0 +1,97 @@
+<!DOCTYPE html>                                      <!--表格制作相关内容-->
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>表格制作相关内容</title>
+	</head>
+	<body>
+		<table  border="1px">                                       <!--加边框-->
+			<tr>                                                     <!--(tr)多少纵-->
+			     <td>表头第一个内容</td>               <!--(td)多少横-->  <!--(用th代替td)字体加粗且居中，用于表头-->
+			     <td>表头第二个内容</td>	           
+			     <td>表头第n个内容</td>	
+			</tr>   		
+			<tr>
+			     <td>第二行第一个内容</td>
+			     <td>第二行第二个内容</td>	
+			     <td>第二行第n个内容</td>	
+			</tr>  
+			<tr>
+			     <td>第三行第一个内容</td>
+			     <td>第三行第二个内容</td>	
+			     <td>第三行第n个内容</td>	
+			</tr>   
+                                </table>	 
+                     <br1>      <table  border="1px" cellpadding="20px" cellspacing="20">                                         <!--(br)换行-->       
+                                   	
+                         <thead>                                                                             <!--表头-->                  
+                                   	                  
+			<tr>                                                   
+			     <th>表头第一个内容</th>                      <!--(th)加粗-->
+			     <th>表头第二个内容</th>	           
+			     <th>表头第n个内容</th>	
+			</tr>    
+			</thead> 
+			<tbody>                                                      <!--表格主题内容-->
+			<tr>
+			     <td>第二行第一个内容</td>
+			     <td>第二行第二个内容</td>	
+			     <td>第二行第n个内容</td>	
+			</tr>    
+			<tr>
+			     <td>第三行第一个内容</td>
+			     <td>第三行第二个内容</td>	
+			     <td>第三行第n个内容</td>	
+			</tr>    
+			</tbody>
+			    <tfoot>                                                    <!--表角-->
+			<tr>                                                   
+			     <th>表角第一个</th>                              <!--(th)加粗-->
+			     <th>表角第二个内容</th>	           
+			     <th>表角第n个内容</th>	
+			</tr>    
+			    </tfoot>
+	                    </table>	
+	         </br1>          
+	                                          
+	    <br2>     <table  border="1px">                                       
+			<tr>                                                    
+			     <td>表头第一个内容</td>               
+			     <td>表头第二个内容</td>	           
+			     <td>表头第n个内容</td>	
+			</tr>    
+			<tr2>
+			     <td colspan="2">第二行第一个内容 用colspan合并</td>            
+			     <!--合并横单元格(2为合并2格)-->
+			   	                                                                          <!--第二行无第二单元格-->
+			     <td>第二行第n个内容</td>	
+			</tr3>    
+			<tr>
+			     <td>第三行第一个内容</td>
+			     <td>第三行第二个内容</td>	
+			     <td>第三行第n个内容</td>	
+			</tr>   
+                                    </table>
+                       </br2>                        
+                                
+        <br3>                    <table  border="1px" >                                       
+			<tr>                                                     
+			     <th rowspan="2">内容1,用rowsapn合并</th>                       <!--合并纵单元格(2为合并2格)-->
+			     <th>表头第二个内容</th>	           
+			     <th>表头第n个内容</th>	
+			</tr>    
+			<tr>
+			     <td>第二行第一个内容</td>
+			    	                                                                            <!--合并纵单元格需删除此格否则不整齐-->
+			     <td>第二行第n个内容</td>	
+			</tr>    
+			<tr>
+			     <td >第三行第一个内容</td>
+			     <td>第三行第二个内容</td>	
+			     <td>第三行第n个内容</td>	
+			</tr> 
+		</br3> 	
+                                </table>
+                                
+	</body>
+</html>

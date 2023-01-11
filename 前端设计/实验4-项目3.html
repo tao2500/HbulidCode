@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>姜苏福利彩票</title>
+		<style>
+			
+			h1{
+				text-align: center;
+			}
+			ul{
+				list-style: none;
+			}
+			.content{
+				border: 1px solid blue;
+				width: 700px;
+				height: 310px;
+			}
+			.logo2{
+				float: right;
+			}
+			.tex{
+				height: 110px;
+				width: 400px;
+				position: absolute;
+				left: 150px;
+				top: 170px;
+				border: 1px solid red;
+			}
+			.ul2{
+				position: absolute;
+				left: 550px;
+				top: 155px;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="content">
+			<img src="img/实验4/ico_7l.gif" class="logo1"/>
+			<img src="img/实验4/fc_logo.jpg" class="logo2"/>
+			<h1>福彩投注站投注助手</h1>
+			<ul>
+				<li><input type="button" value=" 机注1注 " onclick="createe(1)"/></li>
+				<br />
+				<li><input type="button" value=" 机注5注 " onclick="createe(5)"/></li>
+				<br />
+				<li><input type="button" value="机注10注" onclick="createe(10)"/></li>
+			</ul>
+			<select class="tex" size="5" readonly="readonly">
+				
+			</select>
+			<ul class="ul2">
+				<li><input type="button" value="    删除   " onclick="delate()"/></li>
+				<br />
+				<li></li>
+				<br />
+				<br />
+				<li><input type="button" value="全部删除" onclick="delateall()"/></li>
+			</ul>
+		</div>
+	</body>
+	<script>
+//		window.onload = create(8);
+		function createe(num){
+			var sele = document.getElementsByClassName("tex")[0];
+			for (ii=0;ii<num;ii++) {
+//				alert(num  );
+				var optionn = '<option>'+ create() +'</option>';
+				sele.insertAdjacentHTML('beforeend',optionn);
+			}
+			
+		}
+		function create(){
+			var numbe = random();
+			for (i=1;i<8;i++) {
+				numbe = numbe+" "+random();
+			}
+//			console.log(numbe);
+			return numbe;
+		}
+		function random(){
+			var mun = Math.floor(Math.random(99)*100);
+//			console.log(mun);
+		return mun;
+		}
+		function delateall(){
+			var text = document.getElementsByClassName("tex")[0];
+			text.options.length = 0 ;
+		}
+		function delate(){
+			var text = document.getElementsByClassName("tex")[0];
+			text.options.remove(text.selectedIndex);
+		}
+	</script>
+</html>

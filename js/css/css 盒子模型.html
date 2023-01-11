@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>盒子模型 设计网页排版</title>
+		<style type="text/css">
+			.class1{
+				border:  1px solid black;
+				background-color: antiquewhite;
+				padding-top: 10px;     <!--设置上部内边距-->
+				padding-left: 100px;   <!--设置左部内边距-->
+				padding-right: 20px;   <!--设置右部内边距-->
+				padding-bottom: 50px;  <!--设置下部内边距-->
+				
+				padding: 100px;        <!--组合设置上下左右内边距都为100px-->
+				padding: 100px 50px;   <!--组合设置上下内边距为100px 左右内边距为50px-->
+				
+				background-clip: content-box; <!--设置背景只在内容中显示-->
+				background-clip: border-box;<!--设置背景只在边框中显示-->
+				background-clip: padding-box;<!--设置背景只在内边距中显示-->
+			}
+		</style>
+	</head>
+	<body>
+		<div class="class1">内容</div> <!--用来排版-->
+	</body>
+</html>

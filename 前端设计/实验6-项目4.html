@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>获取文本输入框信息</title>
+		<style>
+			fieldset{
+				text-align: center;
+			}
+		</style>
+		<script src="js/vue.js"></script>
+	</head>
+	<body>
+		<fieldset class="kuang" >
+			<legend>学生信息</legend>
+			姓名：<input type="text" placeholder="姓名" v-model="name"/><br />
+			班级：<input type="text" placeholder="班级" v-model="clas"/><br />
+			专业：<input type="text" placeholder="专业" v-model="type"/><br />
+			<input type="button" value="提交" />
+			<input type="button" value="重置" />
+			<br />
+			<h1>{{typee()}}专业、{{classs()}}的{{namee()}}同学，欢迎您！</h1> 
+		</fieldset>
+				
+	</body>
+	<script>
+		new Vue({
+			el:'.kuang',
+			data:{
+				name:"",
+				clas:"",
+				type:""
+			},
+			methods: {
+				namee :function(){
+					return this.name
+				},
+				classs :function(){
+					return this.clas
+				},
+				typee :function(){
+					return this.type
+				}
+			}
+		})
+	</script>
+</html>

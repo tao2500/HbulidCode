@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>鼠标拖动</title>
+		<style>
+			div{
+				width: 150px;
+				height: 100px;
+				position: absolute;
+			}
+			.tuoo{
+				background-color: #5F9EA0;
+				cursor: move;
+				margin: 8px;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="tuo">
+			<span class="tuoo" onmouseup="up()">按住我可拖动标签</span>
+			<span><br />这是一个可拖动的标签</span>
+		</div>
+	</body>
+	<script>
+		window.onload=ttuo();
+		function ttuo(){
+			var tuo = document.getElementsByClassName("tuo")[0];
+			var tuoo = document.getElementsByClassName("tuoo")[0];
+			tuoo.onmousedown = function(e){
+				var e = e||window.event;
+				var x = e.clientX - tuo.offsetLeft;
+				var y = e.clientY - tuo.offsetTop;
+				if(typeof tuo.setCapture!="undefined"){
+					tuo.setCapture();
+				}
+				tuoo.onmousemove = function(e){
+					var e = e||window.event;
+					var left = e.clientX - x;
+					var top = e.clientY - y;
+					if(left<0){
+						left = 0;
+					}else if(left>window.innerWidth - tuo.offsetWidth){
+						left = window.innerWidth - tuo.offsetWidth;
+					}
+					if(top<0){
+						top=0;
+					}else if(top > window.innerHeight - tuo.offsetHeight){
+						top = window.innerHeight - tuo.offsetHeight;
+					}
+					tuo.style.left = left+'px';
+					tuo.style.top = top + 'px';
+				};
+			}
+		}
+		function up(e){
+			var tuo = document.getElementsByClassName("tuo")[0];
+			var e = e||window.event;
+			this.onmouseover = null;
+			this.onmouseup = null;
+			if(typeof tuo.releaseCapture!="undefined"){
+				tuo.releaseCapture();
+			}
+		}
+	</script>
+</html>

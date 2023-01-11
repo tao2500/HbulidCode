@@ -1,0 +1,142 @@
+ 
+ <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">                                                                                    <!--上-->
+<html> 
+	<head>
+		<meta charset="utf-8" />
+		<title>表单元素</title>
+		<style>
+		.c1{
+			color: gold;
+		}
+		.c2{
+			color:red;
+		}
+		.c3{
+			color:blue;
+		}
+		</style>
+	</head>
+	<body>
+		<form>
+			<div class=c1 lang="no" xml:lang="no">
+			<p class="c2">外部文字1</p>
+			<p class="c3">内部文字</p>
+			</div>
+			<samp>
+				var person = {firstName:"Bill", lastName:"Gats", age:50}
+			</samp>
+			
+			<input type="text" >                                                                                         <!--单行文本框-->
+                                                 <br><br>
+			<input type="text" value="预输入内容">                                                           <!--占位 自动填充-->
+                                                 <br><br>
+			<input type="text" placeholder="预输入内容">	                                           <!--不占文本框的提示-->
+                                                 <br><br>
+			<input type="text" placeholder="输入内容有限制" maxlength="8">                 <!--限制最多能输入的字符-->
+	                                 <br><br>
+            <input type="text" placeholder="预输入内容" size="50">                                                                     <!--拓宽单行文本框-->
+              <br><br>
+            <input type="text" value="内容" readonly>                                                                                           <!--内容只能读不能修改-->
+              <br><br>
+            <input type="password" placeholder="密码">	                                                                            <!--提示且输入内容加密-->
+              <br><br>
+            <textarea rows="20" placeholder="预输入内容"></textarea>  
+            <!--拓展多行元素(rows 多少行)-->
+            <br /><br />
+            <em>着重显示</em>
+            <br /><br />
+            <small>小号字体</small>
+            <sub>定义下标字</sub>
+            <sup>上标字</sup>
+            <p>X<sub>下标</sub></p>
+            <big>大号字体</big>
+            <ins>插入字</ins>
+            <del>删除字</del>
+            <br /><br />
+            <dfn>一个定义项目</dfn>
+            <strong>加重语气</strong>
+			<hr />
+
+
+                                                                                           <!--中-->
+            
+            
+               <br><br>
+               <br><br>	
+               <br><br>	
+            <input type="button" value="按钮">
+
+            <button>按钮</button>                                                                                                                         <!--js合作并且作为绑定事件-->
+
+            <input type="submit" value="提交">                                                                                                     <!--提交表单-->
+
+            <input type="range" min="-100" max="500" step="100">                                                                  <!--（range数字滑动形式）最小-100 最大500 调整以100为最小单位-->
+
+            <input type="range" min="-100" max="500" step="100" value="100">                                             <!--数字滑动 起始值为100-->
+
+            <input type="number" min="-100" max="500" step="100" value="100">                                          <!--（number手动输入形式）手动输入数字-->  
+
+            <input type="checkbox">选择1                                                                                                              <!--(checkbox)复选框-->
+
+            
+            丰顺最帅的是谁？
+            <br> <br>
+            <input type="radio" name="a"> jintao                                                                                                   <!--(name)必选1-->                                                                                 
+
+            <input type="radio" name="a"> jintao                                                                                                   <!--(radio)不可取消复选框-->   
+
+            <input type="radio" name="a" checked> jintao                                                                                      <!--（checked）默认选择该项-->
+            
+
+            你最喜欢吃的水果是什么？
+            <select>                                                                                                                                                     <!--强制必须有一个选项-->
+            	<option>苹果</option>
+            	<option>香蕉</option>                                                                                                                        <!--列表中的选项-->
+            	<option>菠萝</option>
+            </select>
+          
+
+  
+            <input type="text" list="888" />                                                                                                               <!--(list)可自行输入选项-->
+                                                                                                              
+            <datalist id="888">                                                                                                                                   <!--数据列表-->
+
+            	<option>苹果</option>
+            	<option>香蕉</option>
+            	<option>菠萝</option>
+            </datalist>
+
+
+                                                                                           <!--下-->
+
+            <input type="email" >                                                                                                                                 <!--上传电子邮件-->
+
+            <input type="tel" >	                                                                                                                                  <!--上传电话号码-->
+
+            <input type="url" >	                                                                                                                                  <!--上传有效网站-->
+
+            <input type="date">	                                                                                                                                  <!--获取时间-->
+
+            <input type="color">                                                                                                                                  <!--获取颜色-->
+
+            <input type="search">                                                                                                                                 <!--建立搜索框-->
+            	
+            <input type="hidden">                                                                                                                                <!--隐藏文本框-->
+ 
+            <input type="image" src="文件地址">                                                                                                        <!--插入图片-->
+	
+            <input type="image" src="文件地址" width="80px">                                                                                 <!--插入图片并控制大小-->
+	
+            <input type="file" >                                                                                                                                    <!--上传文件-->	
+
+            <input type="file" multiple="同时上传数量">                                                                                              <!--同时上传多少个文件-->
+	
+            <input type="file" required= >                                                                                                                    <!--上传1个文件-->                                                                               
+                                                                 
+
+
+		</form>
+	</body>
+</html>
+

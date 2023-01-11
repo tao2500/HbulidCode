@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="js/vue.js"></script>
+</head>
+<body>
+    <div id="app">
+        <input type="checkbox" value="上网" v-model="nameList">上网
+        <input type="checkbox" value="旅游" v-model="nameList">旅游
+        <input type="checkbox" value="看书" v-model="nameList">看书
+        <input type="checkbox" value="电影" v-model="nameList">电影
+        <input type="checkbox" value="游戏" v-model="nameList">游戏
+        <br />
+        您的兴趣爱好：<span v-for="name in nameList">{{name}} </span>
+        <br />
+        <br />
+        <button @click="selectAll">全选</button>
+        <button @click="revSelect">反选</button>
+        <button @click="selectNull">全不选</button>
+    </div>
+</body>
+<script>
+    var app=new Vue({
+        el:'#app',
+        data() {
+            return {
+                nameList:[]
+            }
+        },
+        methods: {
+            selectAll(){
+                var input=document.getElementsByTagName('input')
+                this.nameList=[]
+                for(var i=0;i<input.length;i++){
+                    input[i].checked=true
+                    this.nameList.push(input[i].value)
+                }
+            },
+            revSelect(){
+                var input=document.getElementsByTagName('input')
+                this.nameList=[]
+                for(var i=0;i<input.length;i++){
+                    input[i].checked=input[i].checked?false:true
+                    if(input[i].checked==true){
+                        this.nameList.push(input[i].value)
+                    }
+                }
+            },
+            selectNull(){
+                var input=document.getElementsByTagName('input')
+                for(var i=0;i<input.length;i++){
+                    input[i].checked=false
+                }
+                this.nameList=[]
+            }
+        },
+    })
+</script>
+</html>

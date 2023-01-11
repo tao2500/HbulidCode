@@ -1,0 +1,424 @@
+html,body,div,ul,li,span,img,a,button,input,select,table,td,tr,th,p,h1,h2,h3,h4,h5,h6,header,section {
+    margin: 0;
+    padding: 0;
+    font-weight: normal;
+}
+
+/*消除X的功能*/
+input::-ms-clear{display: none;}
+input::-webkit-credentials-auto-fill-button {
+    display: none !important;
+    visibility: hidden;
+    pointer-events: none;
+    position: absolute;
+    right: 0;
+}
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    border: 0;
+}
+textarea{
+    border: 0;
+    outline:none;
+    background-color:transparent;
+    resize: none;
+    overflow: hidden;
+}
+
+input,button,select,a {
+    outline: 0;
+    border: 0;
+}
+.dn{
+    display: none;
+}
+.db{
+    display: block;
+}
+
+.clear {
+    clear: both;
+}
+
+.tr-bg{
+    background-color: #f5f5f5;
+}
+.li-bg{
+    background-color: #ededed;
+}
+.click-input{
+    color:#67b9f7!important;
+    /*background: url(../img/icon_select_more_locked.png) no-repeat!important;*/
+}
+
+
+html,body{
+    width: 100%;
+    height: 100%;
+    /*border: 1px solid black;*/
+}
+body{
+    position: relative;
+    background: url("../img/bg.png") no-repeat;
+    /*使背景铺满整个屏幕 兼容ie8*/
+    filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../img/bg.png', sizingMethod=scale);
+    background-size:cover;
+    min-width: 1000px;
+    background-attachment:fixed
+}
+.AllBg{
+    position: absolute;
+    /*padding-top: 50px;*/
+    width: 100%;
+    height: 102%;
+    z-index: 0;
+    /*border: 1px solid red;*/
+}
+.main{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    /*width: 31%;*/
+    /*height: 629px;*/
+    width: 480px;
+    margin-top: -284px;
+    margin-left: -240px;
+    /*border: 1px solid black;*/
+}
+.main h2{
+    text-align: center;
+    margin-top: 84px;
+    color:#586ff7 ;
+    /*border: 1px solid blue;*/
+}
+/*上传头像部分*/
+/*.PageOne{*/
+    /*position: relative;*/
+/*}*/
+.emOut{
+    /*position: absolute;*/
+    width: 110px;
+    /*border: 1px solid blue;*/
+    /*left: 50%;*/
+   margin: 0 auto;
+}
+#PhotoInput{
+    position: absolute;
+    opacity:0;
+    filter:alpha(opacity=0);
+    height: 138px;
+    width: 110px;
+    margin: 0 auto;
+    top: 0;
+    left: 50%;
+    margin-left: -55px;
+    z-index: 9;
+    /*border: 1px solid black;*/
+    cursor: pointer;
+}
+#Photo{
+    height: 138px;
+    width: 110px;
+}
+.InputOut{
+    /*position: absolute;*/
+    width: 268px;
+    margin: 0 auto;
+    /*border: 1px solid black;*/
+}
+/*#Photo{*/
+    /*display: block;*/
+    /*width: 110px;*/
+    /*text-align: center;*/
+    /*margin: 0 auto;*/
+    /*border: 1px solid red;*/
+/*}*/
+#Name,#Grade,#MajorClass,#Born,#Interest,#PhoneNumber{
+    display: block;
+    width: 200px;
+    height: 34px;
+    line-height: 34px;
+    color: #666666;
+    font-size: 14px;
+    margin-top: 16px;
+    background: url("../img/input_bg.png") no-repeat;
+    /*border: 1px solid black;*/
+}
+#Name,#Grade{
+    padding-left: 60px;
+}
+#MajorClass,#Born,#Interest,#PhoneNumber{
+    padding-left: 93px;
+}
+#Grade{
+    color: darkgrey;
+}
+.BornOut{
+    position: relative;
+    width: 268px;
+    height: 34px;
+    margin: 0 auto;
+    margin-top: 16px;
+}
+#Born{
+    margin-top: 0px;
+}
+.BornOut .OutText{
+    position: absolute;
+    top: 20%;
+    left: 6%;
+    font-size: 16px;
+    color: #586ff7;
+}
+#next{
+    display: block;
+    width: 163px;
+    height: 40px;
+    color: #f5f5f5;
+    font-size: 20px;
+    margin: 0 auto;
+    margin-top: 16px;
+    background: url("../img/button_bg.png") no-repeat;
+    cursor: pointer;
+}
+#submit,#returnPage{
+    display: inline-block;
+    width: 66px;
+    height: 35px;
+    color: #f5f5f5;
+    font-size: 18px;
+    margin: 0 auto;
+    margin-top: 16px;
+    cursor: pointer;
+    /*border: 1px solid black;*/
+    border-radius: 5px;
+}
+#returnPage{
+    margin-left: 61px;
+    background-color: gray;
+}
+#submit {
+    margin-left: 230px;
+    background-color: #303133;
+}
+.ChooseOut{
+    position: relative;
+    width: 200px;
+    margin-top: 99px;
+    margin-left:60px ;
+    /*border: 1px solid black;*/
+}
+#ChooseDirection{
+    padding-left: 16px;
+    font-family: "微软雅黑 Light";
+    color: #eb5d4f;
+    font-size: 16px;
+    width: 180px;
+    height: 40px;
+    line-height: 40px;
+    background: url("../img/message_bg_choose_1.png") no-repeat;
+    cursor: pointer;
+    /*border: 1px solid blue;*/
+}
+#Down{
+    position: absolute;
+    top: 17px;
+    left: 155px;
+    cursor: pointer;
+    /*display: none;*/
+}
+#Up{
+    position: absolute;
+    top: 17px;
+    left: 155px;
+    display: none;
+    cursor: pointer;
+}
+/*选择方向的背景图片，若更改方向的种类，高度也需要更改*/
+#KindsBg{
+    position: absolute;
+    z-index: 3;
+    /*margin-left:60px ;*/
+    width: 180px;
+    height: 149px;
+    height: 149px;
+    display: none;
+}
+#ChooseKinds{
+    position: absolute;
+    z-index: 4;
+    /*margin-left:60px ;*/
+    width: 180px;
+    margin-top: 4px;
+    /*height: 178px;*/
+    /*border: 1px solid blue;*/
+    display: none;
+}
+#ChooseKinds li{
+    margin-top: 10px;
+    text-align: center;
+    width: 178px;
+    height: 24px;
+    color: #303133;
+    font-size: 16px;
+    font-family: "微软雅黑 Regular";
+    cursor: pointer;
+}
+.IntroductionOut{
+    position: relative;
+    margin-left:60px ;
+    margin-top: 18px;
+    /*width: 360px;*/
+    /*height: 130px;*/
+    /*border: 1px solid black;*/
+}
+#textOut,#SkillText,#PlanText{
+    display: inline-block;
+    color: #50629e;
+    font-size: 16px;
+    font-family: "微软雅黑";
+}
+#Introduction,#Skill,#Plan{
+    /*text-indent: 2em;*/
+    font-size: 14px;
+    padding: 7px;
+    width: 354px;
+    height: 123px;
+    padding-bottom:0;
+    background: url("../img/message_bg.png") no-repeat;
+    overflow: auto;
+    /*border: 1px solid black;*/
+}
+#NumberLimit,#SkillLimit,#PlanLimit{
+    color: #666666;
+    padding-left: 170px;
+}
+#PlanLimit{
+    padding-left: 224px;
+}
+.LimitText{
+    color: #666666;
+}
+.SuccessOut{
+    position: relative;
+    width: 480px;
+    height: 632px;
+    /*border: 1px solid black;*/
+}
+#success{
+    position: absolute;
+    display: block;
+    top: 50%;
+    left: 50%;
+    width: 200px ;
+    height: 196px;
+    margin-top: -150px;
+    margin-left: -100px;
+    /*margin-top: -;*/
+}
+.SuccessPrompt{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 302px ;
+    height: 82px;
+    margin-top: 87px;
+    margin-left: -151px;
+    font-size: 18px;
+    color: #1c1c1c;
+    /*border: 1px solid black;*/
+}
+#PageOne{
+    /*display: none;*/
+    position: relative;
+}
+#PageTwo{
+    position: relative;
+    display: none;
+}
+#SuccessOut{
+    position: relative;
+    display: none;
+    width: 480px;
+    height: 629px;
+}
+/*验证码*/
+#verification_shade{
+    position: fixed;
+    z-index: 1;
+    width:100%;
+    height:100%;
+    min-height: 100%;
+    min-width: 100%;
+    top:0;
+    background:rgba(0,0,0,0.6);
+    overflow: hidden;
+    display: none;
+}
+.verification_main{
+    position: absolute;
+    z-index: 4;
+    width: 280px;
+    height: 240px;
+    top: 50%;
+    left: 50%;
+    margin-left: -140px;
+    margin-top: -120px;
+    background-color: #ffffff;
+    border-radius: 10px;
+}
+.verification_main h3{
+    color: #3a3a3a;
+    font-size: 16px;
+    margin-top: 30px;
+    text-align: center;
+    /*border: 1px solid black;*/
+}
+.verification{
+    display: inline-block;
+    width: 279px;
+    height: 30px;
+    text-align: center;
+    margin-top: 20px;
+    /*border: 1px solid red;*/
+}
+#verificationImg{
+    display: inline-block;
+    width: 120px;
+    height: 30px;
+    margin: 0 auto;
+    border:1px solid #999999;
+}
+#refresh{
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    margin-left: 5px;
+    padding-bottom: 5px;
+    /*border:1px solid blue;*/
+}
+#verificationResult{
+    display: block;
+    width: 80px;
+    height: 30px;
+    margin: 20px auto 0 auto;
+    text-align: center;
+    border-radius: 8px;
+    border:1px solid #999999;
+}
+#resultButtom{
+    display: block;
+    width: 80px;
+    height: 30px;
+    margin: 30px auto 0 auto;
+    color: #ffffff;
+    border-radius: 8px;
+    background-color: #000000;
+}

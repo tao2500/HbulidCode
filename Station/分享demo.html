@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			.fader1{
+				height: 300px;
+				width: 300px;
+				background-color: #5F9EA0;
+				
+			}
+			.borther{
+				position: relative;
+				background-color: #3594CB;
+			}
+			.son1{
+				height: 150px;
+				background-color: #A9A9A9;
+				position: absolute;
+				top: 0px;
+				left: 0px;
+				
+			}
+			.son1-1{
+				height: 100px;
+				background-color: #BDD0DB;
+				position: absolute;
+				top: 160px;
+				left: 20px;
+				bottom: 0px;
+				right: 10px;
+			}
+				
+			.fader2{
+				background-color: #7C7A65;
+				height: 300px;
+				width: 300px;
+			}
+			.son2{
+				background-color: #47A3DA;
+				position: relative;
+				top: 10px;
+				left: 10px;
+				
+			}
+			.brother2-1{
+				margin: -20px auto 0 auto;
+			}
+			.borther2-2{
+				position: absolute;
+				background-color: #FF7F50;
+				top 0;
+				left: 0;
+				bottom: 0;
+				right: 0;
+			}
+			.fader3{
+				background-color: #666666;
+				width: 300px;
+				height: 300px;
+				color: #F5F9FA;
+			}
+			.son3{
+				background-color: #5F9EA0;
+				float: left;
+			}
+		</style>
+	</head>
+	<body>
+		<!--<div class="test-relative">-->
+			绝对
+			<div class="fader1">
+			父级元素
+				<div class="borther">
+					<!--1-->
+					<span style="z-index: 20;">test</span>
+					<div class="son1">
+						子元素
+						<span >文本1</span>
+						<span>文本2</span>
+						<!--<span style="float: right;">文本3</span>-->
+					</div>
+					
+					<div class="son1-1">
+						这是一个内部流体布局
+						<div class="minifader">
+							<span>
+								内流1
+							</span>
+							<span style="float: right;">
+								内流2
+							</span>
+							<span style="position: absolute; right: 0; top: 0;">内流3</span>
+						</div>
+						
+					</div>
+				</div>
+			</div>
+		<!--</div>-->
+		
+		<div>
+			<span style="position: relative; 
+				top: 15px;
+				<!--position: absolute;"-->
+				>当绝对定位存在时，相对定位无效</span>
+		</div>
+		<hr />
+		
+		相对
+		<div class="fader2">
+			父级元素
+				<div class="borther2">
+					<div class="son2">
+						子元素
+						<span>文本1</span>
+						<span>文本2</span>
+					</div>
+					<!--<div class="brother2-1">
+						<img src="coding-50/coursework/02/end/img/logo.png" />
+					</div>-->
+					<!--<div style="position: relative; height: 35px; width: 230px;">
+						<div class="borther2-2">
+							绝对定位内部流
+						</div>
+					</div>-->
+					
+				</div>
+		</div>
+		
+		<hr />
+		
+		浮动
+		<div class="fader3">
+			父元素
+			<div class="son3">
+				子元素
+				<span>文本1</span>
+				<span>文本2</span>
+			</div>
+		</div>
+	</body>
+</html>

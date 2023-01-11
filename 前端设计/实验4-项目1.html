@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>电话拨号键盘</title>
+		<style>
+			.output{
+				width: 90px;
+			}
+		</style>
+	</head>
+	<body>
+		<input type="text" class="output" value="" readonly="readonly"/>
+		<br />
+		<table>
+			<tr>
+				<td><input type="button" class="but1" value="1" onclick="shows(1)" /></td>
+				<td><input type="button" class="but2" value="2" onclick="shows(2)" /></td>
+				<td><input type="button" class="but3" value="3" onclick="shows(3)" /></td>
+			</tr>
+			<tr>
+				<td><input type="button" class="but4" value="4" onclick="shows(4)" /></td>
+				<td><input type="button" class="but5" value="5" onclick="shows(5)" /></td>
+				<td><input type="button" class="but6" value="6" onclick="shows(6)" /></td>
+			</tr>
+			<tr>
+				<td><input type="button" class="but7" value="7" onclick="shows(7)" /></td>
+				<td><input type="button" class="but8" value="8" onclick="shows(8)" /></td>
+				<td><input type="button" class="but9" value="9" onclick="shows(9)" /></td>
+			</tr>
+			<tr>
+				<td><input type="button" class="but10" value="*" onclick="shows('*')" /></td>
+				<td><input type="button" class="but11" value="0" onclick="shows(0)" /></td>
+				<td><input type="button" class="but12" value="#" onclick="shows('#')" /></td>
+			</tr>
+		</table>
+	</body>
+	<script>
+		
+		function shows(v){
+			var show = document.getElementsByClassName("output")[0];
+			var customary = show.value;
+			var text = customary+v;
+			show.value = text; 
+		}
+	</script>
+</html>

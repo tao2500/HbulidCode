@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			#di{
+				background-color: #4CAF50;
+				font-size: x-large;
+				text-align: center;
+			}
+			.p2{
+				position: relative;
+			}
+			.p3{
+				position: absolute;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="di">
+			<span><p>这是一个用了css样式的文本</p></span>
+		</div>
+		<p class="p1">测试文字z-index</p>
+		<p class="p2">测试文字z-index</p>
+		<p class="p3">测试文字z-index</p>
+		
+		<script>
+			var div = document.getElementById("di");
+			var stylee = window.getComputedStyle(div,null);
+//			alert(div.style);
+//			alert(stylee); 
+			var p1 = document.getElementsByClassName("p1")[0];
+			var p2 = document.getElementsByClassName("p2")[0];
+			var p3 = document.getElementsByClassName("p3")[0];
+			var p11 = window.getComputedStyle(p1,null);
+			var p22 = window.getComputedStyle(p2,null);
+			var p33 = window.getComputedStyle(p3,null);
+			alert("static的index = "+p11.zIndex);
+			alert("relative的index = "+p22.zIndex);
+			alert("absolute的index = "+p33.zIndex);
+		</script>
+	</body>
+</html>

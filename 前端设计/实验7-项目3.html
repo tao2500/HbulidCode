@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>银行账户系统</title>
+		<script src="js/vue.js">
+			Vue.config.productionTip = false;
+		</script>
+	</head>
+	<body>
+		<div id="content">
+			<h1>银行账户余额变更通知</h1><br />
+			<p>账号：{{id}}</p>
+			<p v-once>余额为：{{number}}</p>
+			支取人民币：<input type="number" v-model="jian" />
+			<button @click="runn()" >支取{{jian}}元 </button>
+			支取后的余额为：{{number}}元<br />
+			<h1>以下是支出明细账</h1>
+			<hr />
+			<span id="generate">
+				
+			</span>
+		</div>
+	</body>
+	<script>
+		var nu = 1;
+		var newvue = new Vue({
+			el:'#content',
+			data:{
+				id:22221022516512315,
+				number:100000,
+				jian:'',
+			},
+			methods:{
+				runn:function(){
+//					this.number = this.number - this.jian,
+					addData(),
+					nu++
+				}
+			}
+		})
+		function addData () {
+			var actio = document.getElementById("generate");
+			var p = document.createElement("p");
+			if(newvue.jian>newvue.number){
+				alert("亲，醒醒，您的账户没有那么多钱！");
+//				newvue.number = newvue.number + newvue.jian;
+				nu--;
+				return null;
+			}
+			newvue.number = newvue.number - newvue.jian;
+			var text = document.createTextNode("第"+nu+"次，支取"+newvue.jian+"元，余额为："+newvue.number);
+			p.appendChild(text);
+			actio.appendChild(p);
+		}
+	</script>
+</html>

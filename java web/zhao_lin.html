@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>找零系统</title>
+		<style> 
+			body {  
+				background-color: cyan; 
+			}
+			div {   
+				background-color: darkgrey;
+				text-align: center;
+			} 
+			 
+		</style>
+	</head>
+	<body> 
+		<div>
+			<h1>欢迎使用找零系统！</h1>
+			<p>请输入需找零的数量 1~100</p>
+			<input type="text" value="" name="number" id="number">
+			<input type="submit" value="确认" onclick="zhaolin()"/>
+			<p id="content">应找零：</p>
+		</div>
+		<div>
+			<h1>欢迎使用价格统计系统！</h1>
+			<input type="text" placeholder="请输入单件商品的价格" id="confirm"/> 
+			<br />
+			<input type="submit" value="确认输入" onclick="adddata()"/> 
+			&nbsp;
+			<input type="submit" value="统计结果" onclick="ok()" id="ok"/>
+			<p id="2">已输入的内容有：</p>
+		</div>
+		<script src="js/zhao_lin.js" type="text/javascript"></script>
+	</body>
+</html>

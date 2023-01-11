@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="../lib/vue.js"></script>
+    <style>
+        table {
+            border-collapse: collapse;
+            border: 1px solid black;
+            text-align: center;
+        }
+        th {
+            border: 1px solid black;
+            padding: 10px;
+        }
+        td {
+            padding: 10px;
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+    <div id="app">
+        类别<input type="text" v-model="addbook.bookname"><br />
+        作者<input type="text" v-model="addbook.name"><br />
+        价格<input type="text" v-model="addbook.price"><br />
+        <button @click="addBook()">添加</button><br />
+        搜索<input type="text" placeholder="请输入书的类别" v-model="msg"><br />
+        <button @click="searchBook()">搜索</button>
+        <table>
+            <thead>
+                <tr>
+                    <th>序号</th>
+                    <th>类别</th>
+                    <th>作者</th>
+                    <th>价格</th>
+                    <th>时间</th>
+                    <th>操作</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr v-for="(item,index) in arr1" :key="item.id">
+                    <td>{{item.id}}</td>
+                    <td>{{item.bookname}}</td>
+                    <td>{{item.name}}</td>
+                    <td>价格：{{item.price}}元</td>
+                    <td>{{item.time}}</td>
+                    <td><button @click='delBook(index)'>删除</button></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <script>
+        new Vue({
+            el: '#app',
+            data: {
+                msg: '',
+                addbook: {
+                    bookname: '',
+                    name: '',
+                    price: '',
+                    time: new Date()
+                },
+                arr: [
+                    { id: 0, bookname: '人文', name: 'xzl', price: 20, time: new Date() },
+                    { id: 1, bookname: '政治', name: 'wwh', price: 30, time: new Date() },
+                    { id: 3, bookname: '历史', name: 'wz', price: 50, time: new Date() },
+                    { id: 4, bookname: '科学', name: 'xzl', price: 60, time: new Date() },
+                    { id: 5, bookname: '人文', name: 'wz', price: 80, time: new Date() },
+                    { id: 6, bookname: '历史', name: 'wp', price: 20, time: new Date() },
+                    { id: 7, bookname: '科学', name: 'wp', price: 90, time: new Date() },
+                ],
+                arr1: [{ id: 0, bookname: '人文', name: 'xzl', price: 20, time: new Date() },
+                { id: 1, bookname: '政治', name: 'wwh', price: 30, time: new Date() },
+                { id: 3, bookname: '历史', name: 'wz', price: 50, time: new Date() },
+                { id: 4, bookname: '科学', name: 'xzl', price: 60, time: new Date() },
+                { id: 5, bookname: '人文', name: 'wz', price: 80, time: new Date() },
+                { id: 6, bookname: '历史', name: 'wp', price: 20, time: new Date() },
+                { id: 7, bookname: '科学', name: 'wp', price: 90, time: new Date() },]
+            },
+            methods: {
+                // 新增书本
+                addBook:function() {
+                    // 通过转json字符串等一些列操作进行深拷贝，切断与v-model的联系写入数组
+                    var str = JSON.parse(JSON.stringify(this.addbook))//深拷贝
+                    str.id = this.arr.length + 1
+                    this.arr1.push(str);
+                    this.arr.push(str);
+                },
+                // 删除书本
+                delBook:function(index) {
+                    if (confirm('确定删除吗？')) {
+                        this.arr1.splice(index, 1)
+                        this.arr.splice(index, 1)
+                    }
+                },
+                // 搜索书本
+                searchBook:function() {
+                    var key = this.msg
+                    if (key) {
+                        // 这里为了实现单机重复搜索的功能
+                        // 显示从新数组中循环遍历显示
+                        // 搜索从老数组中中搜索，防止只有一个数组导致数据覆盖
+                        // 实际项目中都有对应的接口所以并不用考虑这个问题
+                        var res = this.arr.filter(item => {
+                            return item.bookname.indexOf(key) != -1
+                        })
+                        this.arr1 = res
+                    }
+                }
+            }
+        })
+    </script>
+</body>
+</html>

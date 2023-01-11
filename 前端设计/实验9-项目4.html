@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>P107</title>
+		<style>
+			body{
+				border: 1px dashed #BDB76B;
+			}
+			#header{
+				text-align: center;
+				color:  #8A2BE2;
+				background-color: #5F9EA0;
+				height: 60px;
+			}
+			.headertext{
+				padding: 8px;
+			}
+			#nav{
+				margin-top:30px;
+				margin-bottom: 10px; 
+			}
+			#nav input{
+				margin-top: 10px;
+				border: 1px dashed #BDB76B;
+				border-radius: 8px;
+				height: 30px;
+			}
+			button{
+				color: #F0F8FF;
+				background-color: coral;
+				width: 80px;
+				height: 30px;
+				border-radius: 8px;
+			}
+			table{
+				border: 1px solid coral;
+				text-align: center;
+			}
+			thead{
+				background-color: coral;
+				
+			}
+			.tsmall{
+				height: 30px;
+				width: 90px;
+			}
+			.tbig{
+				height: 30px;
+				width: 210px;
+			}
+			#change{
+				margin-top: 10px;
+				text-align: center;
+			}
+		</style>
+		<script src="js/vue.js">
+		</script>
+	</head>
+	<body>
+		<div id="content">
+			<div id="header">
+				<h2 class="headertext">简易图书管理系统</h2>
+			</div>
+			<div id="nav">
+				id:<input type="text" v-model="bookid" placeholder="请输入序号"/>
+				书名：<input type="text" v-model="bookname" placeholder="请输入图书名称"/>
+				出版社：<input type="text" v-model="publi" placeholder="请输入出版社"/>
+				作者：<input type="text" v-model="author" placeholder="请输入作者"/>
+				<button @click="afteradd()">添加</button>
+				<br />
+				请输入搜索关键字：<input type="text" v-model="findtext" placeholder="请输入搜索关键字" />
+				<button @click="find()">搜索</button>
+			</div>
+			<div id="table">
+				<table>
+					<thead>
+						<tr>
+							<td class="tsmall">序号</td>
+							<td class="tbig">图书名称</td>
+							<td class="tbig">出版社</td>
+							<td class="tsmall">作者</td>
+							<td class="tbig">时间</td>
+							<td class="tbig">操作</td>
+						</tr>
+					</thead>
+					<tbody>
+						<tr v-for="(item,index) in link">
+							<td>{{index+1}}</td>
+							<td>{{item.bookname}}</td>
+							<td>{{item.publi}}</td>
+							<td>{{item.author}}</td>
+							<td>{{item.time}}</td>
+							<td><button @click="edit(item)">编辑</button>&nbsp;<button @click="delate(index)">删除</button></td>
+						</tr>
+					</tbody>
+					
+				</table>
+				<div id="change" v-if="changelist">
+					<input type="text" v-model="change.bookname" placeholder="请输入图书名称"/>
+					<br />
+					<input type="text" v-model="change.publi" placeholder="请输入出版社"/>
+					<br />
+					<input type="text" v-model="change.author" placeholder="请输入作者"/>
+					<br />
+					<button @click="okedit()">更新</button>
+					<button @click="changelist = false">取消</button>
+				</div>
+			</div>
+		</div>
+		
+	</body>
+	<script>
+		new Vue({
+			el:"#content",
+			data:{
+				bookid:'',
+				bookname:'',
+				publi:'',
+				author:'',
+				time:'',
+				changelist : false,
+				change : {},
+				changeid:'',
+				findtext:'',
+				link:[{bookid:1,
+				bookname:'vue.js从入门到项目实战',
+				publi:'清华大学出版社',
+				author:'胡同江',
+				time:'2022-4-21 0:47:6'},{
+					bookid:2,
+					bookname:'java程序需设计',
+					publi:'电子工业出版社',
+					author:'耿祥义',
+					time:'2022-4-21 0:47:16'
+				},{
+					bookid:3,
+					bookname:'javaScript高级程序设计',
+					publi:'高等教育出版社',
+					author:'张路路',
+					time:'2022-4-21 0:47:26'
+				}],
+			},
+			methods:{
+				createbookid: function(){
+					this.bookid++
+					return this.bookid
+			},
+				afteradd: function(){
+					if(!(this.bookid == '' || this.bookname == '' || this.publi == '' || this.author == '')){
+						this.add()
+					}else
+					alert("请输入完整信息后再添加！！！")
+				},
+				add: function(){
+					this.link.push({
+						bookname:this.bookname,
+						publi:this.publi,
+						author:this.author,
+						time:getTime(),
+					})
+				},
+				find: function(){
+					var _this = this
+						for(var i = 0;i < this.link.length; i++){
+							if(!(_this.link[i].bookname.search(this.findtext) != -1)){
+//								alert("找到"+_this.link[i].bookname),
+								this.link.splice(i,1),
+								this.find()
+							}
+//							alert("正在检查"+_this.link[i].bookname)
+							
+						}
+				},
+				edit: function(item){
+					this.changelist = true,
+					this.change = {
+						bookname:item.bookname,
+						publi:item.publi,
+						author:item.author,
+						time:getTime(),
+					},
+					this.changeid = item.id
+				},
+				okedit: function(){
+					var _this = this
+					for(var i = 0;i < this.link.length; i++){
+						if(_this.link[i].id == this.changeid){
+							_this.link[i]={
+								bookname : _this.change.bookname,
+								author : _this.change.author,
+								publi : _this.change.publi,
+								time:getTime(),
+	//							alert(_this.link[i].id +"  、、、"+this.changeid);
+							}
+						}
+					};
+					this.changelist = false
+				},
+				delate: function(index){
+					this.link.splice(index,1)
+				}
+			}
+		})
+		
+//		var bookId = 0;
+//		function getBookId(){
+//			this.bookid = this.bookid + 1;
+//			return this.bookid
+//		}
+		
+		function getTime(){
+			var now = new Date();
+			return now.format("yyyy-MM-dd hh:mm:ss");
+		}
+		
+		Date.prototype.format = function(fmt) { 
+		     var o = { 
+		        "M+" : this.getMonth()+1,                 //月份 
+		        "d+" : this.getDate(),                    //日 
+		        "h+" : this.getHours(),                   //小时 
+		        "m+" : this.getMinutes(),                 //分 
+		        "s+" : this.getSeconds(),                 //秒 
+		        "q+" : Math.floor((this.getMonth()+3)/3), //季度 
+		        "S"  : this.getMilliseconds()             //毫秒 
+		    }; 
+		    if(/(y+)/.test(fmt)) {
+		            fmt=fmt.replace(RegExp.$1, (this.getFullYear()+"").substr(4 - RegExp.$1.length)); 
+		    }
+		     for(var k in o) {
+		        if(new RegExp("("+ k +")").test(fmt)){
+		             fmt = fmt.replace(RegExp.$1, (RegExp.$1.length==1) ? (o[k]) : (("00"+ o[k]).substr((""+ o[k]).length)));
+		         }
+		     }
+		    return fmt; 
+		}        
+	</script>
+</html>

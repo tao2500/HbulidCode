@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>v-forand自定义指令</title>
+		<script src="js/vue.js">
+			Vue.config.productionTip = false;
+		</script>
+	</head>
+	<body>
+		<div id="content">
+			<h2>数组对象遍历</h2>
+			<ul>
+				<li v-for="(data,item) in one">{{item}}-{{data}}</li>
+			</ul>
+			<h2>遍历数字</h2>
+			<span v-for="data in 20">{{data +" "}}</span>
+			<h2>遍历对象</h2>
+			<ul>
+				<li v-for="(data,key,item) in object">{{item}}-{{key}}-{{data}}</li>
+			</ul>
+			<h2>普通数组遍历</h2>
+			<ul>
+				<li v-for="(data,item) in two">{{item}}-{{data}}</li>
+			</ul>
+			<h2>绑定key对象数组遍历</h2>
+			<label>序号：</label><input type="text" v-model="id" placeholder="输入序号"/>
+			<label>姓名：</label><input type="text" v-model="name" placeholder="输入序姓名"/>
+			<button type="button" @click="addStudent">添加学生名单</button>
+			<p v-for="user in students" v-bind:key='user.id'>
+				{{user.id}}--{{user.name}}
+			</p>
+		</div>
+	</body>
+	<script>
+		new Vue({
+			el:"#content",
+			data:{
+				one:['vue从入门到实践','vue.js实战','spring Boot+vue全栈开发实战'],
+				object:{
+					姓名:'李大钊',
+					性别:'保密',
+					出生日期:'1920-02-03'
+				},
+				two:[100,200,300,400,220,150,475],
+				students:[{id:1,name:"张怀民"}],
+				id:''
+			},
+			methods:{
+				addStudent: function(){
+					this.students.unshift({id:this.id,name:this.name});//数组开头添加元素		
+				}	
+			},
+		})
+	</script>
+</html>

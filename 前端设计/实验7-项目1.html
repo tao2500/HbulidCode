@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>vue控制反转输入</title>
+		<script src="js/vue.js">
+			Vue.config.productionTip = false;
+		</script>
+	</head>
+	<body>
+		<div id="content">
+			输入内容：<input type="text" v-model="text"/><br>
+			反转内容：{{textt()}}
+		</div>
+	</body>
+	<script>
+		new Vue({
+			el:'#content',
+			data:{
+				text:""
+			},
+			methods: {
+				textt: function(){
+					return this.text.split('').reverse().join('');
+				}
+			}
+		})
+	</script>
+</html>
